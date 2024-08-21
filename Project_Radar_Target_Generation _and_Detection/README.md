@@ -100,11 +100,6 @@ Add a specified offset (in dB) to establish the dynamic threshold.
 Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
 
 ````
-```
-Look! You can see my backticks.
-```
-````
-
 % Use RDM[x,y] from the output of 2D FFT above for implementing CFAR
 for range_index = Tr + Gr + 1 : Nr/2 - Tr - Gr
     for doppler_index = Td + Gd + 1 : Nd - Td - Gd
@@ -128,4 +123,7 @@ for range_index = Tr + Gr + 1 : Nr/2 - Tr - Gr
         end
     end
 end
+````
+
+
 
