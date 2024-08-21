@@ -81,20 +81,20 @@ Loop over all cells in both the range and Doppler dimensions, ensuring that appr
 **2. Slice the Training Window:**
 Extract the training cells surrounding the CUT, excluding the guard cells.
 
-** 3. Zero Non-Training Cells:**
+**3. Zero Non-Training Cells:**
 Set all non-training cells within the sliced window to zero.
 
-** 4. Convert Decibel Values to Power:**
+**4. Convert Decibel Values to Power:**
 Convert the values of the training cells from decibels (dB) to power to linearize the data.
 
-** 5. Calculate Mean Noise Level:**
+**5. Calculate Mean Noise Level:**
 Compute the mean noise level from the training cells.
 
-** 6. Revert to Decibels:**
+**6. Revert to Decibels:**
 Convert this average noise level back from power to dB.
 
-** 7. Determine Dynamic Threshold:**
+**7. Determine Dynamic Threshold:**
 Add a specified offset (in dB) to establish the dynamic threshold.
 
-** 8. Apply Threshold to CUT:**
+**8. Apply Threshold to CUT:**
 Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
