@@ -10,3 +10,6 @@ This project is the first in a series for Udacity's Sensor Fusion Nanodegree, fo
 Additional topics covered include:
 * Point cloud simulation through raycasting
 * Voxel grid filtering and processing
+
+## Visualization of the results 
+
