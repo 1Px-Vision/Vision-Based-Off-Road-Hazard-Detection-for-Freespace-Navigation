@@ -13,5 +13,4 @@ This project utilizes Matlab to explore frequency-modulated continuous-wave (FMC
 
 
 System requirements play a crucial role in defining the design of a radar system. The sensor fusion design for various driving scenarios demands different system configurations from the radar. In this project, you will design a radar based on the specified system requirements. Key parameters such as maximum range and range resolution are essential considerations for waveform design. The sweep bandwidth can be determined based on the desired range resolution, and the sweep slope is calculated using both the sweep bandwidth and sweep time.
-
- $\sqrt{3x-1}+(1+x)^2$
+ $B_{sweep}=\frac{c}{2\cdot RangeResolution}$
