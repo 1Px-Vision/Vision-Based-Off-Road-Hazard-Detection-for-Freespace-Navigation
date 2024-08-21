@@ -29,6 +29,13 @@ $Slope=\frac{BW}{T_{chirp}}$
 Initial Range and Velocity of the Target
 You will provide the initial range and velocity of the target. The range cannot exceed a maximum value of 200 meters, and the velocity can be any value within the range of -70 to +70 m/s.
 
+## Included in this repository 
+
+* The code used to Radar Target Generation
+* Radar Target Generation and Detection.m - Matlab file containing the challenge for this project
+* Result File with image 
+* This README.md file
+
 ## FFT Operation
 
 ![Range](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_Range.jpg)
@@ -61,3 +68,17 @@ The process above will generate a thresholded block, which is smaller than the R
 * To keep the map size the same as it was before CFAR, equate all the non-thresholded cells to 0.
 
   ![2D_CFAR](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_2D_CFAR.jpg)
+
+### Implementation steps for the 2D CFAR process
+
+Lines 137-208 in the script **Radar_Target_Generation_and_Detection.m**
+
+The 2D Constant False Alarm Rate (CFAR) Algorithm, when applied to the output of the 2D FFT, dynamically adjusts the threshold based on the noise level near the Cell Under Test (CUT). The process involves the following key steps:
+
+1. Iterate over all cells in both the range and Doppler dimensions, ensuring that appropriate margins are maintained at the start and end of the indices.
+2. Extract the training cells surrounding the CUT, excluding the guard cells.
+3. Convert the values of the training cells from decibels (dB) to power to linearize the data.
+4. Calculate the mean noise level from the training cells.
+5. Convert this average noise level back from power to dB.
+6. Add a specified offset (in dB) to establish the dynamic threshold.
+7. Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
