@@ -15,3 +15,4 @@ Additional topics covered include:
 
 ![Result_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Lidar_Obstacle_Detection/lidar-results-road_only.gif)
 
+![Result_2](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Lidar_Obstacle_Detection/lidar-results.gif)
