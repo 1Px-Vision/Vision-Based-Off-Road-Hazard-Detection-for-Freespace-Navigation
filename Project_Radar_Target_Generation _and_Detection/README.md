@@ -60,4 +60,4 @@ The process above will generate a thresholded block, which is smaller than the R
 
 * To keep the map size the same as it was before CFAR, equate all the non-thresholded cells to 0.
 
-  
+  ![2D_CFAR](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_2D_CFAR.jpg)
