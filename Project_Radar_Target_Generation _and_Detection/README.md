@@ -98,3 +98,28 @@ Add a specified offset (in dB) to establish the dynamic threshold.
 
 **8. Apply Threshold to CUT:**
 Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
+
+% Use RDM[x,y] from the output of 2D FFT above for implementing CFAR
+for range_index = Tr + Gr + 1 : Nr/2 - Tr - Gr
+    for doppler_index = Td + Gd + 1 : Nd - Td - Gd
+        % Slice the entire window
+        training = RDM(range_index - Tr - Gr : range_index + Tr + Gr, ...
+                       doppler_index - Td - Gd : doppler_index + Td + Gd);
+        % Set all non-training cells to zero
+        training(range_index - Gr : range_index + Gr, ...
+                 doppler_index - Gd : doppler_index + Gd) = 0;
+        % Convert decibel measurements to power
+        training = db2pow(training);
+        % Calculate the training mean
+        training = sum(training) / N_training;
+        % Revert average power to decibels
+        training = pow2db(training);
+        % Use the offset to determine the SNR threshold
+        threshold = training + offset;
+        % Apply the threshold to the CUT
+        if RDM(range_index, doppler_index) > threshold
+            CFAR(range_index, doppler_index) = 1;
+        end
+    end
+end
+
