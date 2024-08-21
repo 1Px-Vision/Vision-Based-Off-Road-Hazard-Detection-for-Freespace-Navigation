@@ -75,10 +75,26 @@ Lines 137-208 in the script **Radar_Target_Generation_and_Detection.m**
 
 The 2D Constant False Alarm Rate (CFAR) Algorithm, when applied to the output of the 2D FFT, dynamically adjusts the threshold based on the noise level near the Cell Under Test (CUT). The process involves the following key steps:
 
-1. Iterate over all cells in both the range and Doppler dimensions, ensuring that appropriate margins are maintained at the start and end of the indices.
-2. Extract the training cells surrounding the CUT, excluding the guard cells.
-3. Convert the values of the training cells from decibels (dB) to power to linearize the data.
-4. Calculate the mean noise level from the training cells.
-5. Convert this average noise level back from power to dB.
-6. Add a specified offset (in dB) to establish the dynamic threshold.
-7. Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
+**1. Iterate through Range and Doppler Cells:**
+Loop over all cells in both the range and Doppler dimensions, ensuring that appropriate margins are maintained at the start and end of the indices.
+
+**2. Slice the Training Window:**
+Extract the training cells surrounding the CUT, excluding the guard cells.
+
+** 3. Zero Non-Training Cells:**
+Set all non-training cells within the sliced window to zero.
+
+** 4. Convert Decibel Values to Power:**
+Convert the values of the training cells from decibels (dB) to power to linearize the data.
+
+** 5. Calculate Mean Noise Level:**
+Compute the mean noise level from the training cells.
+
+** 6. Revert to Decibels:**
+Convert this average noise level back from power to dB.
+
+** 7. Determine Dynamic Threshold:**
+Add a specified offset (in dB) to establish the dynamic threshold.
+
+** 8. Apply Threshold to CUT:**
+Apply this threshold and store the resulting values in a binary array with the same dimensions as the Range-Doppler Map (RDM).
