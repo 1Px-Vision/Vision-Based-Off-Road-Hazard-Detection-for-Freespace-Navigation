@@ -42,6 +42,6 @@ You will provide the initial range and velocity of the target. The range cannot 
 * Plot the output
 * There should be a peak at the initial position of the target
 
-The 2nd FFT is already implemented in the code. It will generate a Range Doppler Map as seen in the image below and it will be given by variable ‘RDM’. Next task is to implement the CFAR on this Range Doppler Map.
+The 2nd FFT is already implemented in the code. It will generate a Range Doppler Map as seen in the image below and be given by variable ‘RDM’. Next task is to implement the CFAR on this Range Doppler Map.
 
-
+![Doppler](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_Doppler.jpg)
