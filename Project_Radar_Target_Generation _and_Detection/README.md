@@ -69,9 +69,36 @@ The process above will generate a thresholded block, which is smaller than the R
 
   ![2D_CFAR](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_2D_CFAR.jpg)
 
+
+### Selection of Training Cells, Guard Cells, and Offset
+
+Lines 137-155 in the script Radar_Target_Generation_and_Detection.m
+
+The following values were carefully handpicked. I opted for a rectangular window with the longer side aligned with the range cells, which resulted in better filtering of the given Range-Doppler Map (RDM). Selecting the appropriate offset value was crucial for isolating the simulated target and minimizing false positives. Additionally, I precomputed the N_training value to prevent any performance degradation within the nested loop.
+
+````
+% Slide window through the complete range-Doppler map
+
+% Select the number of training cells in both dimensions.
+Tr = 12;  % Training (range dimension)
+Td = 3;  % Training cells (doppler dimension)
+
+% Select the number of guard cells in both dimensions around the Cell Under 
+% Test (CUT) for accurate estimation.
+Gr = 4;  % Guard cells (range dimension)
+Gd = 1;  % Guard cells (doppler dimension)
+
+% Offset the threshold by SNR value in dB
+offset = 15;
+
+% Calculate the total number of training and guard cells
+N_guard = (2 * Gr + 1) * (2 * Gd + 1) - 1;  % Remove CUT
+N_training = (2 * Tr + 2 * Gr + 1) * (2 * Td + 2 * Gd + 1) - (N_guard + 1);
+````
+
 ### Implementation steps for the 2D CFAR process
 
-Lines 137-208 in the script **Radar_Target_Generation_and_Detection.m**
+Lines 172-208 in the script **Radar_Target_Generation_and_Detection.m**
 
 The 2D Constant False Alarm Rate (CFAR) Algorithm, when applied to the output of the 2D FFT, dynamically adjusts the threshold based on the noise level near the Cell Under Test (CUT). The process involves the following key steps:
 
