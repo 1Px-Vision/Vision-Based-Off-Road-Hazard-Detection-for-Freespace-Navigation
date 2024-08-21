@@ -41,4 +41,7 @@ You will provide the initial range and velocity of the target. The range cannot 
 * Keep one half of the signal
 * Plot the output
 * There should be a peak at the initial position of the target
-  
+
+The 2nd FFT is already implemented in the code. It will generate a Range Doppler Map as seen in the image below and it will be given by variable ‘RDM’. Next task is to implement the CFAR on this Range Doppler Map.
+
+
