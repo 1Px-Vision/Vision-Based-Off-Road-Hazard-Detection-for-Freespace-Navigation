@@ -72,7 +72,7 @@ The process above will generate a thresholded block, which is smaller than the R
 
 ### Selection of Training Cells, Guard Cells, and Offset
 
-Lines 137-155 in the script Radar_Target_Generation_and_Detection.m
+Lines 137-155 in the script **Radar_Target_Generation_and_Detection.m**
 
 The following values were carefully handpicked. I opted for a rectangular window with the longer side aligned with the range cells, which resulted in better filtering of the given Range-Doppler Map (RDM). Selecting the appropriate offset value was crucial for isolating the simulated target and minimizing false positives. Additionally, I precomputed the N_training value to prevent any performance degradation within the nested loop.
 
@@ -94,6 +94,14 @@ offset = 15;
 % Calculate the total number of training and guard cells
 N_guard = (2 * Gr + 1) * (2 * Gd + 1) - 1;  % Remove CUT
 N_training = (2 * Tr + 2 * Gr + 1) * (2 * Td + 2 * Gd + 1) - (N_guard + 1);
+````
+### Suppressing Non-Thresholded Cells at the Edges
+
+Line 170 in the script **Radar_Target_Generation_and_Detection.m**
+In my 2D CFAR implementation, only the Cell Under Test (CUT) locations that have sufficient margins to accommodate the entire window are processed. I begin by initializing an empty array of zeros, matching the size of the Range-Doppler Map (RDM). The CUT locations are set to one only when the threshold is exceeded, ensuring that cells at the edges without sufficient margin are not incorrectly marked.
+
+````
+CFAR = zeros(size(RDM));
 ````
 
 ### Implementation steps for the 2D CFAR process
