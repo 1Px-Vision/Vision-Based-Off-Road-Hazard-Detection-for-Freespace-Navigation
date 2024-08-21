@@ -31,6 +31,8 @@ You will provide the initial range and velocity of the target. The range cannot 
 
 ## FFT Operation
 
+![Range](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Results/Fig_Range.jpg)
+
 * Implement the 1D FFT on the Mixed Signal
 * Reshape the vector into Nr*Nd array.
 * Run the FFT on the beat signal along the range bins dimension (Nr)
@@ -39,3 +41,4 @@ You will provide the initial range and velocity of the target. The range cannot 
 * Keep one half of the signal
 * Plot the output
 * There should be a peak at the initial position of the target
+  
