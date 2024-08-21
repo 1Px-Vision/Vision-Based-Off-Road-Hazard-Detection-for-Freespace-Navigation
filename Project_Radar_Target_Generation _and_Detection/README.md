@@ -8,3 +8,5 @@ This project utilizes Matlab to explore frequency-modulated continuous-wave (FMC
 * Phased array beam steering for angle of arrival (AoA) estimation
 * Constant False Alarm Rate (CFAR) noise suppression
 * Signal-to-noise ratio (SNR) analysis and dynamic thresholding
+
+![Project_RADAR](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Radar_Target_Generation%20_and_Detection/Project_RADAR.jpg)
