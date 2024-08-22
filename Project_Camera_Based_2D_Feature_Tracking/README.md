@@ -54,7 +54,8 @@ The standard library container ````std::deque```` provides O(1) complexity for b
 ## MP.2 Keypoint detection
 Lines 81-87 in MidTermProject_Camera_Student.cpp
 
-```` string detectorType = "...";  // Uncomment to set detector selection
+````
+string detectorType = "..."; // Uncomment to set detector selection
         // string detectorType = "SHITOMASI";
         // string detectorType = "HARRIS";
         string detectorType = "FAST";
@@ -62,4 +63,5 @@ Lines 81-87 in MidTermProject_Camera_Student.cpp
         // string detectorType = "ORB";
         // string detectorType = "AKAZE";
         // string detectorType = "SIFT";
+
 ````
