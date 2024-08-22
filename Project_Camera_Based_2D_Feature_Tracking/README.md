@@ -46,3 +46,7 @@ Performance benchmarks, sorted by number of matched keypoints. The matching algo
 ## Visualization of matched keypoints with FAST detectors and ORB descriptors 
 
 ![Fast_detector](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Camera_Based_2D_Feature_Tracking/Results/FAST_detectors_and_ORB.jpg)
+
+## MP.1 Data Buffer Optimization
+
+The standard library container std::deque provides O(1) complexity for both insertion and deletion operations at either end of the queue. This allows for constant time operations when managing objects. The current size of the deque can also be checked in continuous time. To add new items, .push_back() is used, and when the predefined ring buffer size limit is exceeded, older items are removed using ´.pop_front()´. 
