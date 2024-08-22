@@ -10,4 +10,36 @@ These techniques lay the groundwork for the subsequent step: estimating time-to-
 
 # Visualization of the results
 
-Keypoints are visualized with SIFT detectors, indicating keypoint size and orientation.
+
+## Keypoints are visualized with SIFT detectors, indicating keypoint size and orientation.
+
+
+![Keypoint](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Camera_Based_2D_Feature_Tracking/Results/SIFT_Keypoint.jpg)
+
+## Visualization of matched keypoints with FAST detectors and ORB descriptors 
+
+
+
+| Detector type | Descriptor type | Number of matched keypoints | Time detectors (ms) | Time descriptors (ms) | Total time (ms) |
+|---------------|-----------------|------------------------------|---------------------|-----------------------|-----------------|
+| FAST          | BRIEF           | 332                          | 1.67                | 1.53                  | 2.47            |
+| FAST          | BRIEF           | 327                          | 1.93                | 1.18                  | 3.08            |
+| FAST          | BRIEF           | 326                          | 1.69                | 1.15                  | 3.14            |
+| FAST          | SIFT            | 325                          | 1.61                | 1.3                   | 2.91            |
+| FAST          | SIFT            | 324                          | 1.64                | 0.92                  | 2.56            |
+| FAST          | BRIEF           | 323                          | 1.55                | 1.13                  | 2.68            |
+| FAST          | ORB             | 321                          | 1.65                | 1.07                  | 2.72            |
+| FAST          | ORB             | 320                          | 1.53                | 1.03                  | 2.55            |
+| FAST          | SIFT            | 316                          | 1.45                | 1.5                   | 2.95            |
+| FAST          | BRIEF           | 315                          | 1.62                | 1.06                  | 2.68            |
+| FAST          | ORB             | 315                          | 1.48                | 1.09                  | 2.57            |
+| FAST          | SIFT            | 315                          | 1.52                | 1.31                  | 2.82            |
+| FAST          | ORB             | 311                          | 1.56                | 0.97                  | 2.53            |
+| FAST          | SIFT            | 311                          | 1.59                | 1.29                  | 2.88            |
+| FAST          | ORB             | 308                          | 1.57                | 0.98                  | 2.54            |
+| FAST          | BRIEF           | 307                          | 1.82                | 0.93                  | 2.74            |
+| FAST          | ORB             | 307                          | 1.66                | 1.16                  | 2.83            |
+| FAST          | ORB             | 302                          | 1.78                | 0.93                  | 2.71            |
+| FAST          | SIFT            | 301                          | 1.66                | 1.42                  | 3.08            |
+| FAST          | SIFT            | 300                          | 1.67                | 1.6                   | 3.27            |
+| FAST          | BRIEF           | 299                          | 1.7                 | 1.02                  | 2.72            |
