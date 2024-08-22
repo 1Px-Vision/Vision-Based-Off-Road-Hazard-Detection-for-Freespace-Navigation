@@ -10,3 +10,8 @@ Key visual elements include:
 * Purple Lines: Indicate radar measurements, displaying the velocity magnitude along the detected angle.
 * Green Spheres: Show the UKF's estimation of the vehicle's current position and its projected position several timesteps into the future.
 * It’s important to note that the future position projection might initially fluctuate and take some time to stabilize after a lane change. This behavior arises from the assumptions within the Constant Turn Rate and Velocity (CTRV) motion model employed in this project.
+
+## Overview of the Unscented Kalman Filter (UKF) Algorithm
+
+A typical Kalman filter operates as a Bayesian filter, which is effective when variables are normally distributed and undergo linear transitions at each time step. However, the Unscented Kalman Filter (UKF) extends this capability to handle non-linear transitions. The UKF achieves this by sampling multiple points (called sigma points) around the mean state estimate, distributed according to a spreading factor, 𝜆. The UKF algorithm follows these steps:
+
