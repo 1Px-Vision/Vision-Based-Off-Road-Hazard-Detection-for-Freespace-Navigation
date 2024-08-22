@@ -132,7 +132,21 @@ Among the evaluated detectors, Harris detected the fewest relevant keypoints. Th
   
 ## MP.8 Performance Evaluation 2
 
-We counted the number of matched keypoints for each valid combination of detector type and descriptor type, totaling 35 combinations. It's important to note that SIFT descriptors could not be extracted when using ORB detectors, and AKAZE descriptors were only compatible with AKAZE detectors.
+We counted the number of matched keypoints for each valid combination of detector type and descriptor type, totaling 35 combinations. It's important to note that SIFT descriptors could not be extracted when using ORB detectors, and AKAZE descriptors were only compatible with **AKAZE** detectors. Refer to the results in the file in the Result directory: ````Task_MP8_MP9.csv````. The FAST detectors, when paired with BRIEF, SIFT, and ORB descriptors, consistently yielded the highest number of matched keypoints, averaging around 300 per image.
 
-Refer to the results in the file in the Result directory: ````Task_MP8_MP9.csv````. The FAST detectors, when paired with BRIEF, SIFT, and ORB descriptors, consistently yielded the highest number of matched keypoints, averaging around 300 per image.
+## MP.9 Performance Evaluation 3
 
+Using FAST detectors, which are generally the quickest, the three fastest descriptors identified were:
+
+* BRISK
+* BRIEF
+* ORB
+All these combinations consistently achieved execution times under 3 milliseconds. Refer to the results in: ````Task_MP8_MP9.csv````.
+
+However, it's crucial to consider the trade-off between processing speed and the number of keypoints successfully matched. The most effective combinations for this project were:
+
+* FAST detectors with ORB descriptors
+* FAST detectors with BRIEF descriptors
+* FAST detectors with SIFT descriptors
+* 
+There are two main drawbacks to using SIFT: patent costs and potential delays in processing. In some instances, SIFT combinations reached execution times up to 6 milliseconds. In contrast, the runtime distribution for combinations of FAST with ORB and BRIEF descriptors was more consistently under 3 milliseconds.
