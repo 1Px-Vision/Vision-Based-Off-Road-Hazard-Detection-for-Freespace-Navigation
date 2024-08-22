@@ -65,3 +65,15 @@ string detectorType = "..."; // Uncomment to set detector selection
         // string detectorType = "SIFT";
 
 ````
+## MP.3 Keypoint removal
+Lines 134-144 in MidTermProject_Camera_Student.cpp
+````
+if (vehicleRect.contains(kp.pt))
+    // Keep this keypoint, kp
+
+````
+
+## MP.4 Keypoint descriptors
+Lines 180-185 in MidTermProject_Camera_Student.cpp
+
+string descriptorType = "...";  // Uncomment to set descriptor selection
