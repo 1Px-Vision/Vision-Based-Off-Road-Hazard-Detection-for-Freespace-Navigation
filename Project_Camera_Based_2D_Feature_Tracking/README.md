@@ -50,3 +50,8 @@ Performance benchmarks, sorted by number of matched keypoints. The matching algo
 ## MP.1 Data Buffer Optimization
 
 The standard library container ````std::deque```` provides O(1) complexity for both insertion and deletion operations at either end of the queue. This allows for constant time operations when managing objects. The current size of the deque can also be checked continuously. To add new items, ````.push_back()```` is used, and when the predefined ring buffer size limit is exceeded, older items are removed using ````.pop_front()````. 
+
+## MP.2 Keypoint detection
+Lines 81-87 in MidTermProject_Camera_Student.cpp
+
+```` string detectorType = "...";  // Uncomment to set detector selection````
