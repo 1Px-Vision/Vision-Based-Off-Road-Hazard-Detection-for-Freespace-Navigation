@@ -7,3 +7,7 @@ This project is the second in a series for Udacity's Sensor Fusion Nanodegree, f
 * Extracting and matching keypoint descriptors using methods such as FLANN and k-NN
 * 
 These techniques lay the groundwork for the subsequent step: estimating time-to-collision.
+
+# Visualization of the results
+
+Keypoints visualized with SIFT detectors, indicating keypoint size and orientation.
