@@ -75,5 +75,13 @@ if (vehicleRect.contains(kp.pt))
 
 ## MP.4 Keypoint descriptors
 Lines 180-185 in MidTermProject_Camera_Student.cpp
-
+````
 string descriptorType = "...";  // Uncomment to set descriptor selection
+// string descriptorType = "BRISK";
+// string descriptorType = "BRIEF";
+ string descriptorType = "ORB";
+// string descriptorType = "FREAK";
+// string descriptorType = "AKAZE";  // Fails with all non-AKAZE detectors
+// string descriptorType = "SIFT";  // Fails with ORB detectors
+
+````
