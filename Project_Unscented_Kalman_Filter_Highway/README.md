@@ -16,4 +16,5 @@ Key visual elements include:
 A typical Kalman filter operates as a Bayesian filter, which is effective when variables are normally distributed and undergo linear transitions at each time step. However, the Unscented Kalman Filter (UKF) extends this capability to handle non-linear transitions. The UKF achieves this by sampling multiple points (called sigma points) around the mean state estimate, distributed according to a spreading factor, 𝜆. The UKF algorithm follows these steps:
 
 **1. Generate Sigma Points:** Create sigma (sampling) points in the augmented state space.
+
 **2. Predict Sigma Point Motion:** Forecast the movement of each sigma point based on the Constant Turn Rate and Velocity (CTRV) model.
