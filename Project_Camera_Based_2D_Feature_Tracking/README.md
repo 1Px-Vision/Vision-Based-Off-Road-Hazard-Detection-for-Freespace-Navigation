@@ -109,8 +109,14 @@ else {
 }
 ````
 
+In the performance benchmarks detailed below (MP.7-9), the matcherType was configured to ````MAT_BF```` and the selectorType to ````SEL_KNN````. This setup enables match filtering according to the descriptor distance ratio.
 
 
+## MP.6 Descriptor Distance Ratio
+Lines 75-82 in **matching2D_Student.cpp**
 
+I encountered some challenges in debugging this section, which involved understanding the structure of the data returned by ````cv::DescriptorMatcher::knnMatch````. It returns a vector of vectors of DMatch objects, where some nested vectors may have fewer than two elements.
+
+The distance ratio filter compares the distances (SSD) between two potential matches for keypoint descriptors. A threshold value of 0.8 is set to select the match with the minimum distance, identifying it as the correct match. This approach effectively reduces the number of false-positive matches in keypoints.
 
 
