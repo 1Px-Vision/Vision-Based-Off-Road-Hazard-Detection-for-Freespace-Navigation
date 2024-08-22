@@ -1,1 +1,1 @@
-
+The code for camera-based 2D feature tracking is located in the src directory and includes the following files: MidTermProject_Camera_Student.cpp, dataStructures.h, matching2D.hpp, and matching2D_Student.cpp, which together encompass the project's challenge.
