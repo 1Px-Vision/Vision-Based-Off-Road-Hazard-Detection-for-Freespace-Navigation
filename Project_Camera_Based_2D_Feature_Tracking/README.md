@@ -17,7 +17,7 @@ These techniques lay the groundwork for the subsequent step: estimating time-to-
 ![Keypoint](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Camera_Based_2D_Feature_Tracking/Results/SIFT_Keypoint.jpg)
 
 
-Performance benchmarks, sorted by number of matched keypoints. Matching algorithm is brute-force with filtering descriptor distance ratio set to 0.8.
+Performance benchmarks, sorted by number of matched keypoints. The matching algorithm is brute-force with a filtering descriptor distance ratio set to 0.8.
 
 | Detector type | Descriptor type | Number of matched keypoints | Time detectors (ms) | Time descriptors (ms) | Total time (ms) |
 |---------------|-----------------|------------------------------|---------------------|-----------------------|-----------------|
@@ -44,3 +44,5 @@ Performance benchmarks, sorted by number of matched keypoints. Matching algorith
 | FAST          | BRIEF           | 299                          | 1.7                 | 1.02                  | 2.72            |
 
 ## Visualization of matched keypoints with FAST detectors and ORB descriptors 
+
+![Fast_detector](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Camera_Based_2D_Feature_Tracking/Results/FAST_detectors_and_ORB.jpg)
