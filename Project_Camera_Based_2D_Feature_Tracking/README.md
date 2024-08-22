@@ -94,8 +94,20 @@ The function matchDescriptors in **matching2D_Student.cpp** employs a decision t
 * **selectorType can be either:** SEL_NN (nearest neighbors) or SEL_KNN (k nearest neighbors)
 To simplify the process and minimize mismatches related to the descriptor category, I've made the descriptorCategory dependent on the descriptorType. In this context, SIFT is evaluated as the sole descriptor that utilizes a histogram of gradients (HoG) approach.
 
+Lines 205-214 in **MidTermProject_Camera_Student.cpp**
 
-
+````
+/* For descriptor type, select binary (BINARY) or histogram of gradients (HOG) */
+/* BINARY descriptors include: BRISK, BRIEF, ORB, FREAK, and (A)KAZE. */
+/* HOG descriptors include: SIFT (and SURF and GLOH, all patented). */
+string descriptorCategory {};
+if (0 == descriptorType.compare("SIFT")) {
+    descriptorCategory = "DES_HOG";
+}
+else {
+    descriptorCategory = "DES_BINARY";
+}
+````
 
 
 
