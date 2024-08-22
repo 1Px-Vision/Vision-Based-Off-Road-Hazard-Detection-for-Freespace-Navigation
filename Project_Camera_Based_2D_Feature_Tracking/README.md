@@ -141,12 +141,11 @@ Using FAST detectors, which are generally the quickest, the three fastest descri
 * BRISK
 * BRIEF
 * ORB
-All these combinations consistently achieved execution times under 3 milliseconds. Refer to the results in: ````Task_MP8_MP9.csv````.
-
-However, it's crucial to consider the trade-off between processing speed and the number of keypoints successfully matched. The most effective combinations for this project were:
+  
+All these combinations consistently achieved execution times under ````3 ms````. Refer to the results in: ````Task_MP8_MP9.csv````. However, it's crucial to consider the trade-off between processing speed and the number of keypoints successfully matched. The most effective combinations for this project were:
 
 * FAST detectors with ORB descriptors
 * FAST detectors with BRIEF descriptors
 * FAST detectors with SIFT descriptors
-* 
+  
 There are two main drawbacks to using SIFT: patent costs and potential delays in processing. In some instances, SIFT combinations reached execution times up to ````6 ms````. In contrast, the runtime distribution for combinations of FAST with ORB and BRIEF descriptors was more consistently under ````3 ms````.
