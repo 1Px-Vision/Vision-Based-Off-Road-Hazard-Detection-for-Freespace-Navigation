@@ -130,3 +130,9 @@ Among the evaluated detectors, Harris detected the fewest relevant keypoints. Th
 * **BRISK:** Produced between 254 and 297 keypoints per image.
 * **AKAZE:** Yielded between 155 and 179 keypoints per image.
   
+## MP.8 Performance Evaluation 2
+
+We counted the number of matched keypoints for each valid combination of detector type and descriptor type, totaling 35 combinations. It's important to note that SIFT descriptors could not be extracted when using ORB detectors, and AKAZE descriptors were only compatible with AKAZE detectors.
+
+Refer to the results in the file in the Result directory: ````Task_MP8_MP9.csv````. The FAST detectors, when paired with BRIEF, SIFT, and ORB descriptors, consistently yielded the highest number of matched keypoints, averaging around 300 per image.
+
