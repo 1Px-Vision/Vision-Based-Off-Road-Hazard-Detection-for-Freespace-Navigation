@@ -149,4 +149,4 @@ However, it's crucial to consider the trade-off between processing speed and the
 * FAST detectors with BRIEF descriptors
 * FAST detectors with SIFT descriptors
 * 
-There are two main drawbacks to using SIFT: patent costs and potential delays in processing. In some instances, SIFT combinations reached execution times up to "6 ms````. In contrast, the runtime distribution for combinations of FAST with ORB and BRIEF descriptors was more consistently under ````3 ms````.
+There are two main drawbacks to using SIFT: patent costs and potential delays in processing. In some instances, SIFT combinations reached execution times up to ````6 ms````. In contrast, the runtime distribution for combinations of FAST with ORB and BRIEF descriptors was more consistently under ````3 ms````.
