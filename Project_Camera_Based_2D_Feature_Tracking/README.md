@@ -85,3 +85,20 @@ string descriptorType = "...";  // Uncomment to set descriptor selection
 // string descriptorType = "SIFT";  // Fails with ORB detectors
 
 ````
+
+## MP.5 Descriptor matching
+The function matchDescriptors in **matching2D_Student.cpp** employs a decision tree-like structure based on specific string parameters:
+
+* **descriptorCategory can be either:** DES_BINARY (binary) or DES_HOG (histogram of gradients)
+* **matcherType can be either:** MAT_FLANN (````cv::FlannBasedMatcher````) or MAT_BF (brute force)
+* **selectorType can be either:** SEL_NN (nearest neighbors) or SEL_KNN (k nearest neighbors)
+To simplify the process and minimize mismatches related to the descriptor category, I've made the descriptorCategory dependent on the descriptorType. In this context, SIFT is evaluated as the sole descriptor that utilizes a histogram of gradients (HoG) approach.
+
+
+
+
+
+
+
+
+
