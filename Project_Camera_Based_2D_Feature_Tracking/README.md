@@ -8,6 +8,13 @@ This project is the second in a series for Udacity's Sensor Fusion Nanodegree, f
   
 These techniques lay the groundwork for the subsequent step: estimating time-to-collision.
 
+## Included in this repository 
+
+* The code used to Camera based 2D feature tracking on src directory with MidTermProject_Camera_Student.cpp, dataStructures.h, matching2D.hpp, matching2D_Student.cpp file containing the challenge for this project
+* Result File with image SIFT_Keypoint and FAST_detectors_and_ORB
+* Task_MP7.csv and Task_MP8_MP9.csv
+* This README.md file
+
 # Visualization of the results
 
 
