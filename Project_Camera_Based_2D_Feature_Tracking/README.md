@@ -120,3 +120,13 @@ I encountered some challenges in debugging this section, which involved understa
 The distance ratio filter compares the distances (SSD) between two potential matches for keypoint descriptors. A threshold value of 0.8 is set to select the match with the minimum distance, identifying it as the correct match. This approach effectively reduces the number of false-positive matches in keypoints.
 
 
+## MP.7 Performance Evaluation 1
+
+We assessed the number of keypoints located within the bounding box of the preceding vehicle for each type of detector. Refer to the Results directory in: Task_MP7.csv
+
+Among the evaluated detectors, Harris detected the fewest relevant keypoints. The top three performers based on this metric were:
+
+* **FAST:** Consistently generated approximately 400 keypoints per image.
+* **BRISK:** Produced between 254 and 297 keypoints per image.
+* **AKAZE:** Yielded between 155 and 179 keypoints per image.
+  
