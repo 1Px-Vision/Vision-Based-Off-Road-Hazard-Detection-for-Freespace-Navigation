@@ -18,3 +18,14 @@ A typical Kalman filter operates as a Bayesian filter, which is effective when v
 **1. Generate Sigma Points:** Create sigma (sampling) points in the augmented state space.
 
 **2. Predict Sigma Point Motion:** Forecast the movement of each sigma point based on the Constant Turn Rate and Velocity (CTRV) model.
+
+**3. Predict the Next State:** Estimate the next state's mean and covariance matrices.
+
+**4. Lidar Measurement Prediction:** Predict the measurement mean and covariance, then calculate the Kalman gain 𝐾.
+
+**5.Radar Measurement Prediction:** Predict the measurement mean ($𝑧_{pred}$) and the innovation covariance 𝑆.
+
+**6.State Update:** Update the state by applying the Kalman gain to the residual (the difference between the measurement and the prediction).
+
+**7.Repeat the Process:** Continue iterating these steps to refine the state estimate over time.
+
