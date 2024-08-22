@@ -23,9 +23,9 @@ A typical Kalman filter operates as a Bayesian filter, which is effective when v
 
 **4. Lidar Measurement Prediction:** Predict the measurement mean and covariance, then calculate the Kalman gain 𝐾.
 
-**5.Radar Measurement Prediction:** Predict the measurement mean ($𝑧_{pred}$) and the innovation covariance 𝑆.
+**5. Radar Measurement Prediction:** Predict the measurement mean ($𝑧_{pred}$) and the innovation covariance 𝑆.
 
-**6.State Update:** Update the state by applying the Kalman gain to the residual (the difference between the measurement and the prediction).
+**6. State Update:** Update the state by applying the Kalman gain to the residual (the difference between the measurement and the prediction).
 
-**7.Repeat the Process:** Continue iterating these steps to refine the state estimate over time.
+**7. Repeat the Process:** Continue iterating these steps to refine the state estimate over time.
 
