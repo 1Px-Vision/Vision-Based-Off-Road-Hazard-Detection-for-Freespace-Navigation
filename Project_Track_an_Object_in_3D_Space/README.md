@@ -70,18 +70,21 @@ TTC = (-1.0 / frameRate) / (1 - medianDistRatio);
 
 ## FP.5 Performance evaluation, lidar outliers
 
-I did not encounter any frames where the lidar estimated TTC was unreasonable, with estimates consistently ranging from approximately ````8 to 15 seconds````. I believe that using the median point instead of the closest point effectively mitigated issues caused by outliers. Below, I've included some examples of the lidar top-view.
+I did not encounter any frames where the lidar estimated TTC was unreasonable, with estimates consistently ranging from approximately ````8 to 15 seconds````. Using the median point instead of the closest point effectively mitigated issues caused by outliers. Below, I've included some examples of the lidar top-view.
 
 _Figure 1. Near-side outlier_
 
+![Near_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Near-side%20outlier.jpg)
 
 _Figure 2. Far-side outlier_
 
+![Far_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Far-side%20outlier.jpg)
 
 
+_Figure 3. Multiple-side outlier_
 
-_Figure 3. Mltiple-side outlier_
 
+![Mul_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Multiple-side%20outlier.jpg)
     
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
