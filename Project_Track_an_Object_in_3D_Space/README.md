@@ -35,6 +35,19 @@ void computeTTCLidar
  TTC = d1 * (1.0 / frameRate) / (d0 - d1);
 ````
 
+Lines 192-199 in camFusion_Student.cpp
+To calculate the median, I built a helper function to sort the vector of lidar points.
+
+````
+void sortLidarPointsX(std::vector<LidarPoint> &lidarPoints)
+{
+    // This std::sort with a lambda mutates lidarPoints, a vector of LidarPoint
+    std::sort(lidarPoints.begin(), lidarPoints.end(), [](LidarPoint a, LidarPoint b) {
+        return a.x < b.x;  // Sort ascending on the x coordinate only
+    });
+}
+````
+
 ## FP.3 Associate keypoint matches with bounding boxes
 
 ## FP.4 Compute mono camera-based TTC
