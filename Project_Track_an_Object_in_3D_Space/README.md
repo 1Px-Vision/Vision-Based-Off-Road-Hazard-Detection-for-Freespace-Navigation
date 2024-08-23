@@ -32,3 +32,24 @@ The flowchart below outlines the structure of the final project. The steps withi
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
 Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in highly unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
+
+| Detector  | Descriptor | Frame index | TTC lidar | TTC camera | TTC difference |
+|-----------|------------|-------------|-----------|------------|----------------|
+| FAST      | ORB        | 17          | 9.55      | 9.68       | 0.13           |
+| ORB       | FREAK      | 15          | 8.57      | 8.68       | 0.11           |
+| ORB       | BRISK      | 9           | 13.02     | 13.13      | 0.10           |
+| BRISK     | FREAK      | 11          | 12.81     | 12.88      | 0.07           |
+| SIFT      | SIFT       | 16          | 9.52      | 9.58       | 0.06           |
+| SIFT      | BRISK      | 9           | 13.02     | 13.06      | 0.03           |
+| SIFT      | BRISK      | 13          | 9.96      | 9.99       | 0.02           |
+| SIFT      | BRIEF      | 9           | 13.02     | 13.04      | 0.02           |
+| SHITOMASI | ORB        | 7           | 11.98     | 11.97      | -0.01          |
+| FAST      | FREAK      | 2           | 12.61     | 12.60      | -0.01          |
+| ORB       | BRISK      | 14          | 9.60      | 9.59       | -0.01          |
+| ORB       | SIFT       | 16          | 9.52      | 9.50       | -0.02          |
+| SIFT      | FREAK      | 16          | 9.52      | 9.50       | -0.02          |
+| FAST      | SIFT       | 3           | 14.09     | 14.06      | -0.03          |
+| SIFT      | BRISK      | 17          | 9.55      | 9.52       | -0.03          |
+| SIFT      | BRISK      | 14          | 9.60      | 9.55       | -0.05          |
+| SIFT      | SIFT       | 2           | 12.61     | 12.56      | -0.05          |
+| FAST      | SIFT       | 17          | 9.55      | 9.44       | -0.10          |
