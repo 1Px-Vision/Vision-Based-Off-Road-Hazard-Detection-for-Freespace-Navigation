@@ -10,8 +10,8 @@ This project marks the culmination of the camera unit in Udacity's Sensor Fusion
 ## Included in this repository 
 
 * The code used to Camera based 2D feature tracking on src directory with MidTermProject_Camera_Student.cpp, dataStructures.h, matching2D.hpp, matching2D_Student.cpp file containing the challenge for this project
-* Result File with image SIFT_Keypoint and FAST_detectors_and_ORB
-* Task_MP7.csv and Task_MP8_MP9.csv
+* Result File with image Near-side outlier, Far-side outlier, and Multiple-side outlier
+* results.csv test FP.6
 * This README.md file
 
 ![3D_track](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/ttc_estimation.png)
@@ -88,7 +88,7 @@ _Figure 3. Multiple-side outlier_
     
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
-Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in highly unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
+Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
 
 | Detector  | Descriptor | Frame index | TTC lidar | TTC camera | TTC difference |
 |-----------|------------|-------------|-----------|------------|----------------|
