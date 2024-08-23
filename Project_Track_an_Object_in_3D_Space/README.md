@@ -27,6 +27,10 @@ Following the suggestion, I utilized a ````std::multimap<int, int>```` to keep t
 
 ## FP.2 Compute lidar-based TTC
 
+Lines 202-221 in **camFusion_Student.cpp:** For each frame, I used the median x-distance to minimize the influence of outlier lidar points on the TTC estimate. Using the constant velocity model, the main equation is as follows:
+
+```` TTC = d1 * (1.0 / frameRate) / (d0 - d1);````
+
 ## FP.3 Associate keypoint matches with bounding boxes
 
 ## FP.4 Compute mono camera-based TTC
