@@ -62,6 +62,8 @@ Lines 133-142 in **camFusion_Student.cpp** contain a function that processes eac
 ````
 
 ## FP.4 Compute mono camera-based TTC
+Lines 133-142 in **camFusion_Student.cpp** contain a function that processes each bounding box by iterating through all matched keypoint pairs in an image. If a keypoint is located within the region-of-interest (ROI) of the current frame's bounding box, the keypoint match is linked to the current ````BoundingBox```` data structure.
+
 
 ## FP.5 Performance evaluation, lidar outliers
 
