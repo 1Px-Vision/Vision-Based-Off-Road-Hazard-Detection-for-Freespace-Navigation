@@ -1,1 +1,1 @@
-
+The code for camera-based 3D feature tracking is located in the src directory and includes the following files: 3D_object_tracking src/camFusion_Student.cpp src/FinalProject_Camera.cpp src/lidarData.cpp src/matching2D_Student.cpp src/objectDetection2D.cpp, which together encompass the project's challenge.
