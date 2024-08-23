@@ -52,6 +52,15 @@ void sortLidarPointsX(std::vector<LidarPoint> &lidarPoints)
 
 Lines 133-142 in **camFusion_Student.cpp** contain a function that processes each bounding box by iterating through all matched keypoint pairs in an image. If a keypoint is located within the region-of-interest (ROI) of the current frame's bounding box, the keypoint match is linked to the current BoundingBox data structure.
 
+````
+// Loop over all matches in the current frame
+    for (cv::DMatch match : kptMatches) {
+        if (boundingBox.roi.contains(kptsCurr[match.trainIdx].pt)) {
+            boundingBox.kptMatches.push_back(match);
+        }
+    }
+````
+
 ## FP.4 Compute mono camera-based TTC
 
 ## FP.5 Performance evaluation, lidar outliers
