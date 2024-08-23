@@ -35,7 +35,7 @@ void computeTTCLidar
  TTC = d1 * (1.0 / frameRate) / (d0 - d1);
 ````
 
-Lines 192-199 in camFusion_Student.cpp
+Lines 192-199 in **camFusion_Student.cpp**
 To calculate the median, I built a helper function to sort the vector of lidar points.
 
 ````
