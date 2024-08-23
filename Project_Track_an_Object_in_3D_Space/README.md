@@ -72,6 +72,17 @@ TTC = (-1.0 / frameRate) / (1 - medianDistRatio);
 
 I did not encounter any frames where the lidar estimated TTC was unreasonable, with estimates consistently ranging from approximately ````8 to 15 seconds````. I believe that using the median point instead of the closest point effectively mitigated issues caused by outliers. Below, I've included some examples of the lidar top-view.
 
+_Figure 1. Near-side outlier_
+
+
+_Figure 2. Far-side outlier_
+
+
+
+
+_Figure 3. Mltiple-side outlier_
+
+    
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
 Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in highly unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
