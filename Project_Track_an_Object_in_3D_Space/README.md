@@ -21,7 +21,7 @@ The flowchart below outlines the structure of the final project. The steps withi
 ![TCC](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/course_code_structure.png)
 
 ## FP.1 Match 3D objects
-Lines 224-284 in **camFusion_Student.cpp**
+Lines 224-284 in **camFusion_Student.cpp** function ````void matchBoundingBoxes````
 
 Following the suggestion, I utilized a ````std::multimap<int, int>```` to keep track of pairs of bounding box IDs. By counting the keypoint correspondences for each bounding box pair, I identified the best matches between frames.
 
