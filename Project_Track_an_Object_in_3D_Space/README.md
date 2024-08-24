@@ -115,22 +115,6 @@ The TTC using Lidar has a maximum value of 16.689 seconds, which is the highest 
 
 Despite this discrepancy, when we consider the overall dataset, these large differences in TTC values don't significantly impact the outcome. The sporadic nature of these differences suggests that while the Broken Velocity Model might occasionally cause inaccuracies, it does not systematically skew the TTC values over time. Therefore, the model still provides a reasonable estimation of time-to-collision in most scenarios, even though it may not account for all sudden changes in velocity.
 
-
-_Figure 1. Near-side outlier_
-
-![Near_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Near-side%20outlier.jpg)
-
-_Figure 2. Far-side outlier_
-
-![Far_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Far-side%20outlier.jpg)
-
-
-_Figure 3. Multiple-side outlier_
-
-
-![Mul_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Multiple-side%20outlier.jpg)
-    
-
 ## FP.6 Performance evaluation, detector/descriptor combinations
 Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
 
