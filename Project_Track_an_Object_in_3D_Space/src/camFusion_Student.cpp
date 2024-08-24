@@ -129,16 +129,42 @@ void show3DObjects(std::vector<BoundingBox> &boundingBoxes, cv::Size worldSize, 
     }
 }
 
-
-// Associate a given bounding box with the keypoints it contains
+// associate a given bounding box with the keypoints it contains
 void clusterKptMatchesWithROI(BoundingBox &boundingBox, std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPoint> &kptsCurr, std::vector<cv::DMatch> &kptMatches)
-{
-    // Loop over all matches in the current frame
-    for (cv::DMatch match : kptMatches) {
-        if (boundingBox.roi.contains(kptsCurr[match.trainIdx].pt)) {
-            boundingBox.kptMatches.push_back(match);
+{ 
+  	
+    std::vector<cv::DMatch> matches_selected;
+    std::vector<double> matches_distance;
+
+  	// check the keypoints are within the bounding boxes
+    for (int i = 0; i < kptMatches.size(); ++i)
+    {
+      	auto distance=cv::norm(kptsCurr[kptMatches[i].trainIdx].pt - kptsPrev[kptMatches[i].queryIdx].pt);
+        if (boundingBox.roi.contains(kptsCurr[kptMatches[i].trainIdx].pt))
+        {	
+            matches_selected.push_back(kptMatches[i]);
+            matches_distance.push_back(distance);
+        }
+      	else{
+        	continue;
         }
     }
+  	
+	// calculate the mean of the match distances to fileter the points
+  	// https://stackoverflow.com/questions/28574346/find-average-of-input-to-vector-c
+    double meanDistance = std::accumulate(matches_distance.begin(), matches_distance.end(), 0.0) / matches_distance.size();
+  	
+    for (int i = 0; i < matches_distance.size(); ++i)
+    {
+        if (matches_distance[i] < meanDistance) // if near to the mean it's okey else continue;
+        {
+            boundingBox.kptMatches.push_back(matches_selected[i]);
+          	boundingBox.keypoints.push_back(kptsCurr[matches_selected[i].trainIdx]);
+        }
+      	else{
+        	continue;
+        }
+    } 
 }
 
 
