@@ -125,6 +125,13 @@ _Figure 3. Multiple-side outlier_
 
 ![Mul_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Fig_Multiple-side%20outlier.jpg)
     
+## Comparing Lidar and Camera
+
+The poorly estimated case shows the lidar points more spread out compared to the well-estimated one, which makes sense since I use the median to estimate the TTC. With the points being more spread out, the median would be positioned farther away, leading to an overestimation of the TTC.
+
+
+
+
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
 Some detector/descriptor combinations, particularly the Harris and ORB detectors, resulted in unreliable camera TTC estimates. In contrast, detectors like SIFT, FAST, and AKAZE provided consistent results that aligned closely with the TTC estimates from the lidar sensor. Below is a sample of the results matrix, ranked by the difference in TTC estimates between the camera and lidar systems.
