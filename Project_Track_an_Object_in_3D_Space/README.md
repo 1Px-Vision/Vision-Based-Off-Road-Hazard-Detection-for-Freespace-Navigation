@@ -50,7 +50,7 @@ void sortLidarPointsX(std::vector<LidarPoint> &lidarPoints)
 
 ## FP.3 Associate keypoint matches with bounding boxes
 
-The algorithm involves the following steps:
+The algorithm involves the following steps, line 133-168:
 
 * Initialize two empty vectors: matches_selected and matches_distance. These vectors will store the selected matches and their respective distances.
 * Loop through each match in the kptMatches vector.
