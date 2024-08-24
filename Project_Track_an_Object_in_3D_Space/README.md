@@ -129,8 +129,7 @@ _Figure 3. Multiple-side outlier_
 
 The poorly estimated case shows the lidar points more spread out compared to the well-estimated one, which makes sense since I use the median to estimate the TTC. With the points being more spread out, the median would be positioned farther away, leading to an overestimation of the TTC.
 
-
-
+![Lidar_Camera](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Track_an_Object_in_3D_Space/results/Test_Lidar_Camera.jpg)
 
 
 ## FP.6 Performance evaluation, detector/descriptor combinations
