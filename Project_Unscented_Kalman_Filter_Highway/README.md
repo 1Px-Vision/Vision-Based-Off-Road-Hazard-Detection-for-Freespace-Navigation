@@ -2,7 +2,7 @@
 
 In this final project, the scene focuses on the green ego car, while the target vehicles to be tracked are depicted in blue. The traffic cars exhibit dynamic behaviors, such as accelerating, decelerating, and changing lanes by altering their yaw angle. Each traffic vehicle is tracked using an independent Unscented Kalman Filter (UKF) instance.
 
-![UKF](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Unscented_Kalman_Filter_Highway/ukf_fast.gif)
+![](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Unscented_Kalman_Filter_Highway/ukf_fast.gif)
 
 Key visual elements include:
 
