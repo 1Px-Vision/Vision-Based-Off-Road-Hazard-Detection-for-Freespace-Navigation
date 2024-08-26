@@ -16,5 +16,13 @@ I worked on a project involving control, fusion sensors, and tracking with UAVs 
 
 *Fig.1. Evaluation of Autonomous Vehicle Sensors*
 
+## Question 3: Describe the overall process of how a basic Kalman Filter works. Where might a basic Kalman Filter be less than sufficient? How can you improve the basic algorithm to improve performance in such a situation?
 
+Kalman Filters, also known as Linear Quadratic Estimation (LQE), are algorithms that provide more reliable estimates from a sequence of observed measurements, such as sensor data. They can be used to track the position and velocity of a moving pedestrian over time, as well as to quantify the associated uncertainty. The Kalman Filter operates as a two-step iterative process. A key component of this process is the Kalman Gain, a parameter that determines the weight given to the predicted value versus the measured value. It assesses the uncertainty in both the predicted and measured values, then adjusts the actual estimate accordingly, bringing it closer to either the predicted or measured value based on their respective uncertainties.
+
+````
+K = Error In Prediction / (Error in Prediction + Error in Measurement)
+````
+
+Measurement Error is typically provided by sensor manufacturers. When we purchase a new sensor, the manufacturer specifies the standard deviation of the measurements it will produce. On the other hand, Prediction Error is calculated mathematically. We usually start with an incorrect assumption (resulting in a large error), which is then gradually reduced after taking the first few measurements from the sensor, using the Kalman Gain.
 
