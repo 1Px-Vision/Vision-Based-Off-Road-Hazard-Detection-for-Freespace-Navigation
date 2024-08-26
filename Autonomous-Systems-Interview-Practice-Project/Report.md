@@ -110,9 +110,11 @@ $$ H_j = \begin{bmatrix}
 $$
 
 ## Results & Discussion
-This Extended Kalman Filter (EKF) models the following characteristics of the object's state $x:(p_{x},p_{y},v_{x},v_{y})$ , where $𝑝$ represents the position and $v$ represents velocity. The state is initialized with the values 𝑥=(meas1_px, meas1_py,0.5,0.5), where meas1_px,meas1_px and meas1_py, meas1_py are set using the first received measurement. The covariance matrix 𝑃 is initialized with variances (1,1,500,500) along the diagonal to reflect the relative certainty in the initial position and the uncertainty in the initial velocity.
+This Extended Kalman Filter (EKF) models the following characteristics of the object's state $x:(p_{x},p_{y},v_{x},v_{y})$, where $𝑝$ represents the position and $v$ represents the velocity. The state is initialized with the values 𝑥=(meas1_px, meas1_py,0.5,0.5), where meas1_px,meas1_px, and meas1_py, meas1_py are set using the first received measurement. The covariance matrix 𝑃 is initialized with variances (1,1,500,500) along the diagonal to reflect the relative certainty in the initial position and the uncertainty in the initial velocity.
 
 
+
+The overall RMSE value for the position is higher when only one sensor is used compared to when both sensors are utilized. Specifically, the RADAR sensor alone provides poor position estimation due to its sensing mechanism, which primarily relies on the Doppler effect to measure velocity directly. On the other hand, while the LIDAR sensor performs relatively better at estimating position, it struggles with accurate velocity measurements in the absence of RADAR data. This highlights the effectiveness of an Extended Kalman Filter (EKF), which can take noisy measurements from multiple sensor types and generate a more accurate state estimation. The EKF achieves this by combining the Gaussian probability distributions of the sensor measurements with its prediction, also represented as a Gaussian distribution, to determine the likely location of the tracked object.
 
 
 
