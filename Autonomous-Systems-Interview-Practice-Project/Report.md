@@ -47,7 +47,7 @@ x′ = F.x + B.μ + νP′ = FPFᵀ + Q
 
 ### Update Step (Only in case of EKF i.e. Non-Linear Measurements coming from RADAR)
 
-Equation 1:
+#### Equation 1:
 
 ````
 y= z - h(x′)
@@ -73,3 +73,14 @@ h(x') =
 \end{pmatrix}
 $$
 
+#### Equation 2:
+````
+S= HⱼP′Hⱼᵀ + R K= P′HⱼᵀS⁻¹
+````
+* R Measurement Noise
+* K Kalman Gain
+* S-> Total Error
+* S⁻¹ -> The inverse of S
+* Hⱼ -> The Jacobian Matrix
+
+$H_{j}$ represents the Jacobian matrix, which is the first-order derivative that we previously discussed in the context of the Taylor Series. In our case, since we are working with matrices, we need to compute the differential in matrix form.
