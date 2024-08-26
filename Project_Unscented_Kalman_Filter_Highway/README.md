@@ -13,8 +13,8 @@ Key visual elements include:
 
 ## Included in this repository 
 
-* The code used to Lidar environment.cpp with the modifications
-* src directory with code cpp the control LiDAR
+* The code used to UKF main.cpp, ukf.cpp, tools.cpp,render.cpp
+* src directory with code cpp project UKF
 * Files describing all the packages required to set up the environment
 * This README.md file
 
