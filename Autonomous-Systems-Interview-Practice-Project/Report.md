@@ -87,4 +87,5 @@ $H_{j}$ represents the Jacobian matrix, which is the first-order derivative that
 
 $$J_{kl}=\frac{\partial F_{k}}{\partial x_{l}}$$
 
-
+Here, $J_{kl}$ is the (𝑘,𝑙) element of the Jacobian matrix, $F_{k}$ denotes the kth component of the vector function 𝐹, and $X_{l}$ represents the 
+𝑙 lth element of the vector variable 𝑋. Specifically, we have:
