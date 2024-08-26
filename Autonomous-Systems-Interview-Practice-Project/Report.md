@@ -14,7 +14,7 @@ I worked on a project involving control, fusion sensors, and tracking with UAVs 
 
 ![](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Autonomous-Systems-Interview-Practice-Project/Sensor_Fusion_Table.jpg)
 
--- Fig.1. Evaluation of Autonomous Vehicle Sensors  --
+--Fig.1. Evaluation of Autonomous Vehicle Sensors--
 
 
 
