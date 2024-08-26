@@ -109,4 +109,10 @@ $$ H_j = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+## Results & Discussion
+This Extended Kalman Filter (EKF) models the following characteristics of the object's state $x:(p_{x},p_{y},v_{x},v_{y})$ , where $𝑝$ represents the position and $v$ represents velocity. The state is initialized with the values 𝑥=(meas1_px, meas1_py,0.5,0.5), where meas1_px,meas1_px and meas1_py, meas1_py are set using the first received measurement. The covariance matrix 𝑃 is initialized with variances (1,1,500,500) along the diagonal to reflect the relative certainty in the initial position and the uncertainty in the initial velocity.
+
+
+
+
 
