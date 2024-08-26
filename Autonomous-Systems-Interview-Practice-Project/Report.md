@@ -83,4 +83,8 @@ S= HⱼP′Hⱼᵀ + R K= P′HⱼᵀS⁻¹
 * S⁻¹ -> The inverse of S
 * Hⱼ -> The Jacobian Matrix
 
-$H_{j}$ represents the Jacobian matrix, which is the first-order derivative that we previously discussed in the context of the Taylor Series. In our case, since we are working with matrices, we need to compute the differential in matrix form.
+$H_{j}$ represents the Jacobian matrix, which is the first-order derivative that we previously discussed in the context of the Taylor Series. In our case, since we are working with matrices, we need to compute the differential in matrix form. The Jacobian matrix element $J_{kl}$ is defined as:
+
+$$J_{kl}=\frac{\partial F_{k}}{\partial x_{l}}$$
+
+
