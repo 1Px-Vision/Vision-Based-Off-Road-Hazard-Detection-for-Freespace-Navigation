@@ -59,3 +59,17 @@ y= z - h(x′)
 
 This function defines the mapping between our predicted values in Cartesian coordinates and the measurements in Polar coordinates. This mapping is necessary because our predictions are made in Cartesian coordinates, while the sensor-provided measurements (z) are in Polar coordinates.
 
+$$
+h(x') = 
+\begin{pmatrix}
+\rho \\
+\phi \\
+\dot{\rho}
+\end{pmatrix} = 
+\begin{pmatrix}
+\sqrt{{p'_x}^2 + {p'_y}^2} \\
+\arctan\left(\frac{p'_y}{p'_x}\right) \\
+\frac{p'_x v'_x + p'_y v'_y}{\sqrt{{p'_x}^2 + {p'_y}^2}}
+\end{pmatrix}
+$$
+
