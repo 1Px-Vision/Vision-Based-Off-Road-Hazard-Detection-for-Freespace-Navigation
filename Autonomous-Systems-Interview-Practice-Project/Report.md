@@ -1,7 +1,7 @@
 # General
-## Question 1: Explain a recent project you've worked on. Why did you choose this project?,What difficulties did you run into this project that you did not expect, and how did you solve them?
+## Question 1: Explain a recent project you've worked on. Why did you choose this project?, What difficulties did you run into this project that you did not expect, and how did you solve them?
 
-I worked on a project involving control and tracking with UAVs for rescue applications. The project had a strict timeline, and the initial development phase had already begun. There was no existing documentation, and the large code base required updates and adaptations to meet specific requirements. To address this, I used Doxygen to generate documentation directly from the codebase. I also resolved issues daily by employing a simulator to handle various events and messages and writing C++ code to support them.
+I worked on a project involving control, fusion sensors, and tracking with UAVs for rescue applications. The project had a strict timeline, and the initial development phase had already begun. There was no existing documentation, and the large code base required updates and adaptations to meet specific requirements. To address this, I used Doxygen to generate documentation directly from the codebase. I also resolved issues daily by employing a simulator to handle various events and messages and writing C++ code to support them.
 
 # Mandatory
 ## Question 2: What are some of the advantages & disadvantages of cameras, lidar and radar? What combination of these (and other sensors) would you use to ensure the appropriate and accurate perception of the environment?
