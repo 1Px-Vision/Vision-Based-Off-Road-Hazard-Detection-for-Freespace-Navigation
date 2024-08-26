@@ -18,8 +18,3 @@ Have you worked with point clouds and/or the Point Cloud Library (PCL) before? I
 Your perception subsystem has noticed an object in the path of your robot, but it has failed to determine what the object is. How would your perception subsystem further handle this situation?
 * [Code] What approach would you take if the various sensors you are using have different refresh rates?
 * [Code] 3D point clouds are sometimes processed into "voxels" as one step into object detection. 1) What is a voxel, 2) What is the process behind converting point cloud data into voxels (code this), and 3) Why would we want to perform this step with our point cloud data?
-
-## Relevant Nanodegree Projects
-If you put these on your resume, make sure you know your code and the topic in-depth before the interview!
-
-Self-Driving Car Engineer - Finding Lane Lines, Advanced Lane Finding, Vehicle Detection and Tracking, Extended Kalman Filters, Unscented Kalman Filters, along with perception-based deep learning projects
