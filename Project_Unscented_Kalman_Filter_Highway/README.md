@@ -13,11 +13,10 @@ Key visual elements include:
 
 ## Included in this repository 
 
-* The code used to UKF main.cpp, ukf.cpp, tools.cpp,render.cpp
+* The code used to UKF on src directory with main.cpp, ukf.cpp, tools.cpp, render.cpp file containing the challenge for this project
 * src directory with code cpp project UKF
 * Files describing all the packages required to set up the environment
 * This README.md file
-
 
 ## Overview of the Unscented Kalman Filter (UKF) Algorithm
 
