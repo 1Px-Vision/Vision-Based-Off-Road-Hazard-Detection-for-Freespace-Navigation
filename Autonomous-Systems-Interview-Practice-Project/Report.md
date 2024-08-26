@@ -12,4 +12,9 @@ I worked on a project involving control, fusion sensors, and tracking with UAVs 
 
 * **Radar:** Radar technology has been in use for a long time. Similar to LiDAR, it employs a point-and-shoot method, but it uses radio waves (electromagnetic waves) instead of light. Radar is particularly effective for long-distance object detection but generally lacks precision compared to LiDAR. Testing radar technology follows a similar process to LiDAR testing. Given its lower cost and wider familiarity, some companies have already developed specialized tools for radar testing.
 
+![](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Autonomous-Systems-Interview-Practice-Project/Sensor_Fusion_Table.jpg)
+
+-- Fig.1. Evaluation of Autonomous Vehicle Sensors  --
+
+
 
