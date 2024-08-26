@@ -11,6 +11,14 @@ Key visual elements include:
 * Green Spheres: Show the UKF's estimation of the vehicle's current position and its projected position several timesteps into the future.
 * It’s important to note that the future position projection might initially fluctuate and take some time to stabilize after a lane change. This behavior arises from the assumptions within the Constant Turn Rate and Velocity (CTRV) motion model employed in this project.
 
+## Included in this repository 
+
+* The code used to Lidar environment.cpp with the modifications
+* src directory with code cpp the control LiDAR
+* Files describing all the packages required to set up the environment
+* This README.md file
+
+
 ## Overview of the Unscented Kalman Filter (UKF) Algorithm
 
 A typical Kalman filter operates as a Bayesian filter, which is effective when variables are normally distributed and undergo linear transitions at each time step. However, the Unscented Kalman Filter (UKF) extends this capability to handle non-linear transitions. The UKF achieves this by sampling multiple points (called sigma points) around the mean state estimate, distributed according to a spreading factor, 𝜆. The UKF algorithm follows these steps:
@@ -29,3 +37,4 @@ A typical Kalman filter operates as a Bayesian filter, which is effective when v
 
 **7. Repeat the Process:** Continue iterating these steps to refine the state estimate over time.
 
+## Visualization of the results 
