@@ -90,7 +90,7 @@ $$J_{kl}=\frac{\partial F_{k}}{\partial x_{l}}$$
 Here, $J_{kl}$ is the (𝑘,𝑙) element of the Jacobian matrix, $F_{k}$ denotes the kth component of the vector function 𝐹, and $X_{l}$ represents the 
 𝑙 lth element of the vector variable 𝑋. Specifically, we have:
 
-* $$F_{k}=\{\rho,\phi,\dot{\rho}}$$ representing the radial distance, angle, and radial velocity, respectively.
+* $$F_{k}=[\rho,\phi,\dot{\rho}]$$ representing the radial distance, angle, and radial velocity, respectively.
 * $$X_{l}=\{px,py,vx,vy}$$ where $px$ and $py$ are position coordinates, and $vx$ and $vy$ are velocity components.
 
 Since we are dealing with RADAR measurements, which provide four values (two for position and two for velocity), the Jacobian matrix is essential for linearizing the non-linear measurement function around the current state estimate.
