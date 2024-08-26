@@ -44,3 +44,18 @@ The prediction step is identical to that of the Kalman Filter, regardless of whe
 ````
 x′ = F.x + B.μ + νP′ = FPFᵀ + Q
 ````
+
+### Update Step (Only in case of EKF i.e. Non-Linear Measurements coming from RADAR)
+
+Equation 1:
+
+````
+y= z - h(x′)
+````
+* z: Actual measurement in polar coordinates
+* ℎ : Function that maps speed and position to polar coordinates
+* 𝑥′: Predicted value
+* 𝑦: Difference between the measured value and the actual value
+
+This function defines the mapping between our predicted values in Cartesian coordinates and the measurements in Polar coordinates. This mapping is necessary because our predictions are made in Cartesian coordinates, while the sensor-provided measurements (z) are in Polar coordinates.
+
