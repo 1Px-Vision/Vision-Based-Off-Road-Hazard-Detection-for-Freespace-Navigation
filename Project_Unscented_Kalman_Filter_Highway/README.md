@@ -37,3 +37,6 @@ A typical Kalman filter operates as a Bayesian filter, which is effective when v
 **7. Repeat the Process:** Continue iterating these steps to refine the state estimate over time.
 
 ## Visualization of the results 
+
+
+The main.cpp file utilizes highway.h to set up a straight, three-lane highway environment featuring three traffic cars and a central ego car. The viewer's perspective is focused on the ego car, with the coordinate system also relative to it. In this setup, the ego car is green, while the traffic cars are blue. The traffic cars can accelerate and adjust their steering to change lanes. Each traffic car is associated with its own UKF (Unscented Kalman Filter) object, updated individually at every time step. Red spheres above the cars represent the (x, y) coordinates detected by the lidar, and purple lines illustrate radar measurements, indicating the velocity magnitude along the detected angle. Tracking is limited to the X/Y plane, without considering the Z-axis.
