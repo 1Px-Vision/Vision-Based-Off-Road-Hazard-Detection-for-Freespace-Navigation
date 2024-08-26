@@ -26,3 +26,8 @@ K = Error In Prediction / (Error in Prediction + Error in Measurement)
 
 Measurement Error is typically provided by sensor manufacturers. When we purchase a new sensor, the manufacturer specifies the standard deviation of the measurements it will produce. On the other hand, Prediction Error is calculated mathematically. We usually start with an incorrect assumption (resulting in a large error), which is then gradually reduced after taking the first few measurements from the sensor, using the Kalman Gain.
 
+## Question 4: How does an Extended Kalman Filter differ from a regular Kalman Filter? Provide an example of where an EKF would be necessary or improvement, and detail why it would be needed in that situation.
+
+The Extended Kalman Filter (EKF) uses a linear approximation approach, unlike the regular Kalman Filter. EKF is applied when the results are not Gaussian, such as in radar or lidar scenarios, and the standard Kalman Filter equations are insufficient. This is achieved through a Taylor series expansion. Lidar provides distance measurements in a Cartesian coordinate system, whereas radar supplies both distance and velocity in a polar coordinate system.
+
+## Question 5: What is the difference between an Extended Kalman Filter and an Unscented Kalman Filter? In what situations would there be larger differences between the two approaches?
