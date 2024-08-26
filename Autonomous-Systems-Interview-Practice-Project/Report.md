@@ -31,3 +31,16 @@ Measurement Error is typically provided by sensor manufacturers. When we purchas
 The Extended Kalman Filter (EKF) uses a linear approximation approach, unlike the regular Kalman Filter. EKF is applied when the results are not Gaussian, such as in radar or lidar scenarios, and the standard Kalman Filter equations are insufficient. This is achieved through a Taylor series expansion. Lidar provides distance measurements in a Cartesian coordinate system, whereas radar supplies both distance and velocity in a polar coordinate system.
 
 ## Question 5: What is the difference between an Extended Kalman Filter and an Unscented Kalman Filter? In what situations would there be larger differences between the two approaches?
+
+The primary difference between the Extended Kalman Filter (EKF) and the Unscented Kalman Filter (UKF) lies in their approach to approximation. In EKF, we use only a single point, the mean, for approximation. In contrast, UKF employs multiple points, known as sigma points, for approximation. The rationale is that using a larger number of points results in a more accurate approximation. Additionally, these sigma points are assigned weights, making them weighted sigma points. By adjusting these weights, we can give more or less preference to certain points, thereby enhancing the accuracy of our approximation.
+
+## Question 6 :[Code] Explain the steps behind how an Extended Kalman Filter is implemented.
+
+Please refer to the extended Kalman filter implementation based on the provided code. Sensor fusion involves combining data from different sources. In this case, data from sources like Lidar and Radar are organized into matrices and initialized. The necessary include files for the Kalman filter implementation can be found in the header file. The extended Kalman filter processes non-linear data received from the Radar, approximating it into a linear form using a Gaussian approach. This approximation is achieved with the help of a Taylor series expansion.
+
+### Prediction Step
+The prediction step is identical to that of the Kalman Filter, regardless of whether the data comes from LIDAR or RADAR. The source of the data does not affect the prediction step.
+
+````
+x′ = F.x + B.μ + νP′ = FPFᵀ + Q
+````
