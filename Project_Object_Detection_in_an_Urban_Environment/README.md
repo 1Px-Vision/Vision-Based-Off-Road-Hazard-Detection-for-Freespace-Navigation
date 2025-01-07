@@ -15,3 +15,18 @@ Training & Deployment Process Using AWS:
 * **AWS Simple Storage Service (S3):** Served multiple purposes:
    * Storing logs for creating visualizations.
    * Hosting the project data in a public S3 bucket.
+
+## Model Selection
+
+## Results
+
+## Future Work & Possible Improvement
+We identified several opportunities to enhance model performance, though implementing them would require additional resources and a higher computing budget. These include:
+
+* **Extending Training Steps:** The models were trained for only 2000 steps, which is relatively limited given the complexity of the data and architecture. Extending training until the loss plateaus could yield significant performance improvements.
+
+* **Applying Data Augmentation:** Basic flipping, scaling, and random cropping techniques can be incorporated. Advanced methods like color jittering, rotation, and translation can also boost the model's accuracy.
+
+* **Hyperparameter Optimization:** Fine-tuning the model's hyperparameters holds the potential for achieving better performance and robustness.
+
+* **Addressing Occlusion and Partial Object Detection:** This project focused on detecting complete objects, but urban environments often feature partially occluded or obstructed objects. Developing strategies to handle partial object detection could further enhance the model's effectiveness.
