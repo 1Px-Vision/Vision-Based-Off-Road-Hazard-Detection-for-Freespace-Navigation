@@ -20,7 +20,7 @@ Training & Deployment Process Using AWS:
 
 In this project, I evaluated several object detection models using the TensorFlow Object Detection API. The models tested were pre-trained and available in the TensorFlow 2 Object Detection Model Zoo, trained on the COCO 2017 dataset.
 
-To adapt these models for the task, their ''' pipeline.config '''  files were modified to ensure TensorFlow 2 could locate the required TFRecord and label_map.pbtxt files when loaded from Amazon S3. Additionally, since the Waymo dataset includes only three classes—Cars, Pedestrians, and Cyclists—the pipeline.config files were further customized to accommodate this specific class structure, replacing the original 90 classes from the COCO dataset.
+To adapt these models for the task, their ````pipeline.config````  files were modified to ensure TensorFlow 2 could locate the required TFRecord and label_map.pbtxt files when loaded from Amazon S3. Additionally, since the Waymo dataset includes only three classes—Cars, Pedestrians, and Cyclists—the pipeline.config files were further customized to accommodate this specific class structure, replacing the original 90 classes from the COCO dataset.
 
 For all three models, I conducted training with a fixed number of 2,000 steps, constrained by my limited AWS budget. The experiments employed the Momentum Optimizer with a batch size of 8, maintaining consistency across all tests due to the same resource limitations.
 
