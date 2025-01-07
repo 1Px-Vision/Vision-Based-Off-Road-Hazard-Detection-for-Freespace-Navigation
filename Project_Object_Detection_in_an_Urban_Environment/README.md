@@ -30,6 +30,17 @@ Each model was evaluated using the mean Average Precision (mAP) metric, which qu
 
 To monitor the training process, TensorBoard was employed to visualize the training loss and validation mAP for each model. The TensorBoard graphs revealed consistent patterns in training loss among the models, but their generalization performance on the test data varied.
 
+| Metric                     | EfficientNet D1       | SSD MobileNet V2 FPNLite | SSD ResNet50 V1 FPN     |
+|----------------------------|-----------------------|---------------------------|--------------------------|
+| mAP@ (0.5:0.95) IoU       | 0.0938               | 0.09543                  | 0.05755                 |
+| mAP@.50 IoU               | 0.2253               | 0.2234                   | 0.1248                  |
+| mAP@.75 IoU               | 0.0668               | 0.071                    | 0.04505                 |
+| mAP (small objects)       | 0.01484              | 0.0392                   | 0.02317                 |
+| mAP (medium objects)      | 0.364                | 0.3383                   | 0.2107                  |
+| mAP (large objects)       | 0.839                | 0.4531                   | 0.1917                  |
+| Video                     | [EfficientNet](link video) | [MobileNet](link video)  | [ResNet50](link video)   |
+
+
 ## Future Work & Possible Improvement
 We identified several opportunities to enhance model performance, though implementing them would require additional resources and a higher computing budget. These include:
 
