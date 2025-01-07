@@ -42,6 +42,7 @@ SWBAT fuse measurements from lidar and camera ````measurements.py````.
 * The tracking works properly if you see the following results: The tracking loop now updates all tracks with lidar measurements, then with camera measurements.
 * The visualization shows that the tracking performs well, again no confirmed ghost tracks or track losses should occur.
 
+## Results
 ![Track_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_tracking_det.jpg)
 
 ## Included in this repository
