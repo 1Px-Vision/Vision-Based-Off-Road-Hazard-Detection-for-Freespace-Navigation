@@ -38,7 +38,7 @@ To monitor the training process, TensorBoard was employed to visualize the train
 | mAP (small objects)       | 0.01484              | 0.0392                   | 0.02317                 |
 | mAP (medium objects)      | 0.364                | 0.3383                   | 0.2107                  |
 | mAP (large objects)       | 0.839                | 0.4531                   | 0.1917                  |
-| Video                     | ![Model_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_EffecientNet.gif) | ![Model_2](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_MobileNet.gif)  | ![Model_3](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_RESNET.gif)   |
+| Video                     | (https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_EffecientNet.gif) | (https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_MobileNet.gif)  | (https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Object_Detection_in_an_Urban_Environment/Media/Model_RESNET.gif)   |
 
 
 ## Future Work & Possible Improvement
