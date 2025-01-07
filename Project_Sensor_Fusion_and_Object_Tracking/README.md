@@ -11,9 +11,9 @@ The project is divided into two key components:
 
 * **Object Tracking:** This component uses an extended Kalman filter to track vehicles over time by integrating LiDAR detections with camera detections. It also includes data association and track management techniques to maintain robust and accurate tracking.
 
-##Sensor Fusion and Object Tracking
+## Sensor Fusion and Object Tracking
 
-###Tracking
+### Tracking
 Track objects over time with a Kalman Filter ````filter.py````
 * EKF is implemented including appropriate system matrix F and process noise Q for constant velocity motion model.
 * EKF is applied to a simple single-target scenario with lidar only.
