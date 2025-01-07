@@ -26,6 +26,10 @@ For all three models, I conducted training with a fixed number of 2,000 steps, c
 
 ## Results
 
+Each model was evaluated using the mean Average Precision (mAP) metric, which quantifies the model's accuracy in object detection. The mAP is derived from the precision and recall values across various Intersections over Union (IoU) thresholds.
+
+To monitor the training process, TensorBoard was employed to visualize the training loss and validation mAP for each model. The TensorBoard graphs revealed consistent patterns in training loss among the models, but their generalization performance on the test data varied.
+
 ## Future Work & Possible Improvement
 We identified several opportunities to enhance model performance, though implementing them would require additional resources and a higher computing budget. These include:
 
