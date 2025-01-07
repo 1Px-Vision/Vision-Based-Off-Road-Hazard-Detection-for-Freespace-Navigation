@@ -11,3 +11,34 @@ The project is divided into two key components:
 
 * **Object Tracking:** This component uses an extended Kalman filter to track vehicles over time by integrating LiDAR detections with camera detections. It also includes data association and track management techniques to maintain robust and accurate tracking.
 
+##Sensor Fusion and Object Tracking
+
+###Tracking
+Track objects over time with a Kalman Filter ````filter.py````
+* EKF is implemented including appropriate system matrix F and process noise Q for constant velocity motion model.
+* EKF is applied to a simple single-target scenario with lidar only.
+* The mean RMSE is 0.35 or smaller. Please upload the RMSE plot as png or pdf file.
+
+### Track Management
+Initialize, update and delete tracks ````trackmanagement.py````.
+* Track initialization from unassigned measurements is implemented.
+* A track score is defined and implemented.
+* The tracking works properly if you see the following results: After applying the track management to a new sequence (see instructions), the visualization shows that a new track is initialized automatically where unassigned measurements occur, the true track is confirmed quickly, and the track is deleted after it has vanished from the visible range.
+
+### Data Association
+Associate measurements to tracks with nearest neighbor association ````association.py````
+* Nearest neighbor data association including association matrix is implemented.
+* A method that returns nearest track and measurement for association is implemented.
+* Gating method with chi-square-distribution is implemented to reduce complexity.
+* The association works properly if you see the following results: After applying the data association to a new sequence with multiple targets, multiple tracks are updated with multiple measurements.
+* The visualization should show that there are no confirmed “ghost tracks” that do not exist in reality. There may be initialized or tentative “ghost tracks” as long as they are deleted after several frames.
+
+### Sensor Fusión
+
+SWBAT fuse measurements from lidar and camera ````measurements.py````.
+* Camera measurements including appropriate covariance matrix R are implemented.
+* Nonlinear camera measurement model h(x) is implemented. The Jacobian H is given.
+* A method that checks whether an object can be seen by the camera or is outside the field of view is implemented.
+* The tracking works properly if you see the following results: The tracking loop now updates all tracks with lidar measurements, then with camera measurements.
+* The visualization shows that the tracking performs well, again no confirmed ghost tracks or track losses should occur.
+
