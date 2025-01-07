@@ -42,3 +42,10 @@ SWBAT fuse measurements from lidar and camera ````measurements.py````.
 * The tracking works properly if you see the following results: The tracking loop now updates all tracks with lidar measurements, then with camera measurements.
 * The visualization shows that the tracking performs well, again no confirmed ghost tracks or track losses should occur.
 
+## Included in this repository
+The project introduces the following modified files (student directory):
+* loop_over_dataset.py
+* filter.py
+* trackmanagement.py
+* association.py
+* measurements.py
