@@ -30,7 +30,6 @@ sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 # object detection tools and helper functions
 import misc.objdet_tools as tools
 
-
 # compute various performance measures to assess object detection
 def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5):
 
@@ -54,7 +53,6 @@ def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5)
 
             ## step 2 : loop over all detected objects
             for obj in detections:
-
                 ## step 3 : extract the four corners of the current detection
                 _id, x, y, z, _h, w, l, yaw = obj
                 d_box = tools.compute_box_corners(x, y, w, l, yaw)
@@ -88,13 +86,10 @@ def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5)
             ious.append(best_match[0])
             center_devs.append(best_match[1:])
 
-
     ####### ID_S4_EX2 START #######
     #######
     print("student task ID_S4_EX2")
-
     # compute positives and negatives for precision/recall
-
     ## step 1 : compute the total number of positives present in the scene
     # all_positives = 0
     all_positives = labels_valid.sum()
@@ -114,7 +109,6 @@ def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5)
     det_performance = [ious, center_devs, pos_negs]
 
     return det_performance
-
 
 # evaluate object detection performance based on all frames
 def compute_performance_stats(det_performance_all):
@@ -162,7 +156,6 @@ def compute_performance_stats(det_performance_all):
             devs_y_all.append(dev_y)
             devs_z_all.append(dev_z)
     
-
     # compute statistics
     stdev__ious = np.std(ious_all)
     mean__ious = np.mean(ious_all)
