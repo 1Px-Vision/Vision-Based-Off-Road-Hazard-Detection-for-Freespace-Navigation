@@ -54,7 +54,7 @@ The project introduces the following modified files (student directory):
 * association.py
 * measurements.py
 
-### Mid-Term Project:3D Object Detection
+### Mid-Term Project: 3D Object Detection
 * objdet_pcl.py
 * objdet_detect.py
 * objdet_eval.py
