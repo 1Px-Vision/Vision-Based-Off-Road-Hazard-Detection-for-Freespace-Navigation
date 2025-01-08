@@ -201,7 +201,6 @@ def detect_objects(input_bev_maps, model, configs):
 
         elif 'fpn_resnet' in configs.arch:
             # decode output and perform post-processing
-            
             ####### ID_S3_EX1-5 START #######     
             #######
             print("student task ID_S3_EX1-5")
@@ -219,17 +218,13 @@ def detect_objects(input_bev_maps, model, configs):
             #######
             ####### ID_S3_EX1-5 END #######     
 
-            
-
     ####### ID_S3_EX2 START #######     
     #######
     # Extract 3d bounding boxes from model response
     print("student task ID_S3_EX2")
     objects = [] 
-
     ## step 1 : check whether there are any detections
     if len(detections) > 0:
-
         ## step 2 : loop over all detections
         for obj in detections:
             _id, _x, _y, _z, _h, _w, _l, _yaw = obj
