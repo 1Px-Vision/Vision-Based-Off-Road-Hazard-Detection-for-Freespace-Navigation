@@ -73,7 +73,6 @@ Tracking Pipeline Steps:
 * Visualizations confirmed improved tracking continuity and fewer false positives.
 
 ## Challenges Faced
-Most Difficult Part
 ### Sensor Fusion:
 * Handling alignment issues between camera and lidar data due to frame misalignment and sensor differences.
 * Developing an accurate calibration pipeline for transforming lidar data into the camera frame.
