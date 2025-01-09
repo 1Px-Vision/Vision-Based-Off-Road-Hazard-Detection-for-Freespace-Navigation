@@ -4,8 +4,6 @@ In this project, you will integrate measurements from LiDAR and cameras to track
 
 ![tracking](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Tracking.jpg)
 
-![Result_Step_1_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step1_1.png)
-
 The project is divided into two key components:
 
 * **Object Detection:** This component employs a deep learning approach to detect vehicles in LiDAR data, utilizing a bird's-eye view representation of the 3D point cloud. The detection performance is assessed using a series of evaluation metrics to ensure accuracy and reliability.
@@ -46,6 +44,9 @@ SWBAT fuse measurements from lidar and camera ````measurements.py````.
 ## Results
 ![Track_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_tracking_det.jpg)
 
+![Result_Step_1_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step1_1.png)
+
+![Result_4](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step4_1.png)
 ## Project Recap: Sensor Fusion and Tracking
 Tracking Pipeline Steps:
 ### Extended Kalman Filter (EKF):
