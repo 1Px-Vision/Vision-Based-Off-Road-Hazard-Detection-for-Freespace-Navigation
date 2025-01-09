@@ -4,6 +4,7 @@ In this project, you will integrate measurements from LiDAR and cameras to track
 
 ![tracking](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Tracking.jpg)
 
+![Result_Step_1_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step1_1.png)
 
 The project is divided into two key components:
 
