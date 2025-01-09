@@ -67,6 +67,32 @@ Tracking Pipeline Steps:
 * Performed calibration to align lidar and camera frames and merged data into a unified representation.
 * Achieved lower root-mean-square error (RMSE) compared to lidar-only tracking.
 
+## Achievements
+* Reliable object tracking with reduced RMSE values over time.
+* Sensor fusion significantly outperformed lidar-only tracking, particularly in detecting small or occluded objects.
+* Visualizations confirmed improved tracking continuity and fewer false positives.
+
+## Challenges Faced
+Most Difficult Part
+### Sensor Fusion:
+* Handling alignment issues between camera and lidar data due to frame misalignment and sensor differences.
+* Developing an accurate calibration pipeline for transforming lidar data into the camera frame.
+* Ensuring computational efficiency to process fused data in real time.
+
+## Benefits of Camera-Lidar Fusion
+### Theoretical Benefits
+* Combines the strengths of both sensors: lidar provides precise depth information, while the camera offers rich texture and color data.
+* Increased robustness in detecting partially occluded or distant objects.
+### Concrete Results
+* Reduced RMSE in object tracking scenarios.
+* Better detection of small or visually complex objects that lidar might miss.
+
+## Challenges in Real-Life Scenarios
+* Environmental Conditions: Weather (rain, fog, snow) impacts both camera and lidar performance.
+* Sensor Synchronization: Real-time calibration and alignment of sensors are critical to avoid errors.
+* Dynamic Environments: Tracking in crowded areas or with highly dynamic objects is complex.
+* Computational Demands: High-bandwidth sensor data requires significant computational resources.
+
 ## Included in this repository
 The project introduces the following modified files (student directory):
 ### Final Project: Sensor Funsion and Object Tracking
