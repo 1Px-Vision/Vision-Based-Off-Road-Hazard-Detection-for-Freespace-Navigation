@@ -45,6 +45,28 @@ SWBAT fuse measurements from lidar and camera ````measurements.py````.
 ## Results
 ![Track_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_tracking_det.jpg)
 
+## Project Recap: Sensor Fusion and Tracking
+Tracking Pipeline Steps:
+### Extended Kalman Filter (EKF):
+* Implemented an EKF for state estimation, accounting for non-linear motion models.
+* Used measurement updates to correct predictions and refine object state (e.g., position and velocity).
+* Delivered consistent tracking performance.
+### Track Management:
+* Designed a track management system to initialize, update, and delete tracks based on detection confidence and history.
+* Tracks were deleted after several consecutive missed detections.
+* Ensured robust tracking even in the presence of temporary detection losses.
+  
+### Data Association:
+* Developed a nearest-neighbor association algorithm to link sensor measurements with existing tracks.
+* Enhanced the association logic to minimize false matches and handle ambiguous scenarios effectively.
+* Improved overall accuracy in multi-object tracking situations.
+
+### Camera-Lidar Sensor Fusion:
+
+* Combined lidar point cloud data with camera-based detections for improved accuracy.
+* Performed calibration to align lidar and camera frames and merged data into a unified representation.
+* Achieved lower root-mean-square error (RMSE) compared to lidar-only tracking.
+
 ## Included in this repository
 The project introduces the following modified files (student directory):
 ### Final Project: Sensor Funsion and Object Tracking
