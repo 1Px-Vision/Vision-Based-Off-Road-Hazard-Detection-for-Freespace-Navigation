@@ -42,6 +42,8 @@ SWBAT fuse measurements from lidar and camera ````measurements.py````.
 * The visualization shows that the tracking performs well, again no confirmed ghost tracks or track losses should occur.
 
 ## Results
+Result video Video_Tracking.mp4
+
 ![Track_det](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_tracking_det.jpg)
 
 ![Result_Step_1_1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step1_1.png)
