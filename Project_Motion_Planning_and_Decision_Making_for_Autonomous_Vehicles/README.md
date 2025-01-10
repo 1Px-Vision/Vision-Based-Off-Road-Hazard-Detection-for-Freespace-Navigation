@@ -20,7 +20,6 @@ The goal of this project is to implement two critical components of a traditiona
 
 Perform collision and proximity checks, penalizing trajectories approaching or colliding with objects. Bias the vehicle to remain close to the lane centerline for better adherence to road geometry. This project combines advanced motion planning techniques with robust decision-making to enable autonomous vehicles to navigate complex scenarios safely and efficiently.
 
-
 In this project, you will implement two main components of a traditional hierarchical planner: The Behavior Planner and the Motion Planner.
 
 Both will work in unison to be able to:
@@ -35,3 +34,12 @@ To accomplish this, you will implement:
 * Static objects Collision checking.
 * Path and Trajectory generation using Cubic Spirals
 * Best trajectory selection through a cost function evaluation. This cost function will mainly perform a collision check and a proximity check to bring costs higher as we get closer or collide with objects but maintain a bias to stay closer to the lane center line.
+
+# Included in this repository
+The project introduces the following modified files:
+
+* behavior_planner_FSM.cpp
+* cost_functions.cpp
+* motion_planner.cpp
+* planning_params.h
+* velocity_profile_generator.cpp
