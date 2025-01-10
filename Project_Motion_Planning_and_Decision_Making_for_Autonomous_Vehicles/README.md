@@ -37,6 +37,7 @@ To accomplish this, you will implement:
 * Path and Trajectory generation using Cubic Spirals
 * Best trajectory selection through a cost function evaluation. This cost function will mainly perform a collision check and a proximity check to bring costs higher as we get closer or collide with objects but maintain a bias to stay closer to the lane center line.
 
+![Carla_R1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Motion_Planning_and_Decision_Making_for_Autonomous_Vehicles/Carla_Simulator_R.jpg)
 # Included in this repository
 The project introduces the following modified files:
 
