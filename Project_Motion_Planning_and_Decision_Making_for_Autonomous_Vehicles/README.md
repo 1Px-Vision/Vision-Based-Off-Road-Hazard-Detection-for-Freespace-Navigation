@@ -1,5 +1,7 @@
 # Motion Planning and Decision Making for Autonomous Vehicles
 
+![Carla_M](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Motion_Planning_and_Decision_Making_for_Autonomous_Vehicles/Carla_Simulator.jpg)
+
 The goal of this project is to implement two critical components of a traditional hierarchical planner: the Behavior Planner and the Motion Planner. These components will work together to enable the following capabilities:
 
 * **Static Object Avoidance:** The vehicle will detect and avoid static objects (e.g., parked cars, bicycles, and trucks) that encroach on the driving lane. The vehicle will perform either a "nudge" maneuver or a "lane change" to safely navigate around these obstacles without collisions.
