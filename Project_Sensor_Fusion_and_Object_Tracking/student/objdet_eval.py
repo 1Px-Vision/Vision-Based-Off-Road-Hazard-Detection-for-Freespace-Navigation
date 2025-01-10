@@ -135,10 +135,10 @@ def compute_performance_stats(det_performance_all):
     sum_fp = sum_pos_negs[3]
     
     ## step 2 : compute precision
-    precision = sum_tp / (sum_tp + sum_fp)
+    precision = sum_tp / (sum_tp + sum_fp) if (sum_tp + sum_fp) > 0 else 0.0
 
     ## step 3 : compute recall 
-    recall = sum_tp / (sum_tp + sum_fn)
+    recall = sum_tp / (sum_tp + sum_fn) if (sum_tp + sum_fn) > 0 else 0.0
 
     #######    
     ####### ID_S4_EX3 END #######     

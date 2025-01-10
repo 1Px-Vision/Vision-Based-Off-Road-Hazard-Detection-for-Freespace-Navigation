@@ -203,18 +203,11 @@ def detect_objects(input_bev_maps, model, configs):
             # decode output and perform post-processing
             ####### ID_S3_EX1-5 START #######     
             #######
-            print("student task ID_S3_EX1-5")
-            outputs = model(input_bev_maps)
             outputs['hm_cen'] = _sigmoid(outputs['hm_cen'])
             outputs['cen_offset'] = _sigmoid(outputs['cen_offset'])
-            # detections size (batch_size, K, 10)
-            detections = decode(outputs['hm_cen'], outputs['cen_offset'], outputs['direction'], outputs['z_coor'],
-                                outputs['dim'], K=configs.K)
-            detections = detections.cpu().numpy().astype(np.float32)
-            # detections = post_processing(detections, configs.num_classes, configs.down_ratio, configs.peak_thresh)
-            detections = post_processing(detections, configs)
-            detections = detections[0][1]
-
+	    detections = decode(outputs['hm_cen'], outputs['cen_offset'], outputs['direction'], outputs['z_coor'], outputs['dim'], K=40)
+	    detections = detections.cpu().numpy().astype(np.float32)
+            detections = post_processing(detections, configs)  
             #######
             ####### ID_S3_EX1-5 END #######     
 
@@ -224,25 +217,23 @@ def detect_objects(input_bev_maps, model, configs):
     print("student task ID_S3_EX2")
     objects = [] 
     ## step 1 : check whether there are any detections
-    if len(detections) > 0:
+    for det in detections:
         ## step 2 : loop over all detections
-        for obj in detections:
+        for obj in det[1]:
             _id, _x, _y, _z, _h, _w, _l, _yaw = obj
 
             ## step 3 : perform the conversion using the limits for x, y and z set in the configs structure
-            x = _y / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
-            y = _x / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) - (configs.lim_y[1] - configs.lim_y[0]) / 2.0
-            w = _w / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0])
-            l = _l / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
-            z = _z
-            yaw=_yaw
+	    x = bev_y / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
+            y = bev_x / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) - (configs.lim_y[1] - configs.lim_y[0])/2.0 
+            w = bev_w / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) 
+            l = bev_l / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
 
             if ((x >= configs.lim_x[0]) and (x <= configs.lim_x[1])
                 and (y >= configs.lim_y[0]) and (y <= configs.lim_y[1])
                 and (z >= configs.lim_z[0]) and (z <= configs.lim_z[1])):
 
                 ## step 4 : append the current object to the 'objects' array
-                objects.append([1, x, y, 0.0, 1.50, w, l, yaw])
+                objects.append([1, x, y, z, h, w, l, yaw])
 
     #######
     ####### ID_S3_EX2 START #######   
