@@ -35,7 +35,7 @@ To accomplish this, you will implement:
 * Behavioral planning logic using Finite State Machines - FSM
 * Static objects Collision checking.
 * Path and Trajectory generation using Cubic Spirals
-* Best trajectory selection through a cost function evaluation. This cost function will mainly perform a collision check and a proximity check to bring costs higher as we get closer or collide with objects but maintain a bias to stay closer to the lane center line.
+* Best trajectory selection through a cost function evaluation. This cost function will mainly perform a collision and proximity checks to bring costs higher as we get closer or collide with objects but maintain a bias to stay closer to the lane center line.
 
 ![Carla_R1](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Motion_Planning_and_Decision_Making_for_Autonomous_Vehicles/Carla_Simulator_R.jpg)
 
@@ -45,7 +45,7 @@ Clone the repository:
 git clone https://github.com/udacity/nd013-c5-planning-starter.git
 
 ## Run Carla Simulator
-Open new window ()
+Open new window (how_to_run.txt)
 su - student 
 cd /opt/carla-simulator/
 SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
