@@ -9,7 +9,7 @@ In the previous project, a path planner for the autonomous vehicle was built. No
 
 A PID controller is designed and implemented as outlined.
 
-In the ````/pid_controller```` directory, you will find the files ````pid.cpp```` and ````pid.h````, where you will implement your PID controller. The pid function is invoked in main.cpp.
+In the ````/pid_controller```` directory, you will find the files ````pid.cpp```` and ````pid.h````, where you will implement your PID controller. The PID function is invoked in main.cpp.
 
 ### Step 1: Build the PID Controller Object
 
@@ -17,7 +17,7 @@ In the ````/pid_controller```` directory, you will find the files ````pid.cpp```
 * Launch the simulator and switch to desktop mode to view the car in the CARLA simulator.
 * Take a screenshot of the simulation and include it in your report. Ensure the car remains stationary in the simulation.
 
-
+![test_PID](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Test_PID_1.jpg)
 
 
 
