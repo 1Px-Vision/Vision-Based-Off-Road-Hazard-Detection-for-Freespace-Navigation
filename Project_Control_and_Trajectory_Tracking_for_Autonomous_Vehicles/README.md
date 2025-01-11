@@ -34,3 +34,23 @@ Add comments to your code explaining the reasoning behind your method for calcul
 
 **Tuning:**
 Adjust the PID parameters until you achieve satisfactory results. Note that a perfect trajectory is not required—focus on achieving a reasonable outcome.
+
+### Step 3: Implementing the PID Controller for Steering
+
+In ````main.cpp````, complete the TODO (Step 3) to calculate the error for the steering PID controller. The error is defined as the angular difference between the current steering angle and the desired steering angle needed to follow the planned trajectory.
+
+**Helpful Variables:**
+
+* **y_points and x_points:** These represent the desired trajectory planned by the path planner.
+* **yaw:** The current rotational angle of the car.
+* **x_position, y_position, and z_position:** The current position of the car, if required for additional calculations.
+
+The controller's output must remain within the range ````[-1.2, 1.2]````.
+
+**Instructions:**
+
+* Compute the error based on the difference between the current and desired steering angles.
+* Comment your code to explain your approach and reasoning for computing the error.
+  
+**Tuning:**
+Adjust the PID parameters until you achieve satisfactory results. Note that while a perfect trajectory is not expected, the goal is to minimize deviations effectively.
