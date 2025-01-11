@@ -3,6 +3,13 @@
 ## Proportional-Integral-Derivative (PID)
 In this project, a PID controller is designed to perform vehicle trajectory tracking. The controller takes a trajectory represented as an array of locations and operates within a simulation environment. Its efficiency is tested using the CARLA simulator, a widely used tool in the industry.
 
+### Installation
+Run the following commands to install the code:
+
+Clone the repository:
+
+git clone https://github.com/atanasko/Control-an-Trajectory-Tracking-forAutonomous-Vehicles.git
+
 ## Project Instructions
 
 In the previous project, a path planner for the autonomous vehicle was built. Now, a steering and throttle controller is developed to enable the car to follow the planned trajectory.
