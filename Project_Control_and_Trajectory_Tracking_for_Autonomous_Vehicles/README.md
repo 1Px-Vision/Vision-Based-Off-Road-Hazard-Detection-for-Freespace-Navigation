@@ -54,3 +54,8 @@ The controller's output must remain within the range ````[-1.2, 1.2]````.
   
 **Tuning:**
 Adjust the PID parameters until you achieve satisfactory results. Note that while a perfect trajectory is not expected, the goal is to minimize deviations effectively.
+
+### Step 4: Evaluate PID Efficiency
+The error values and PID commands are saved in  ````throttle_data.txt ```` and  ````steer_data.txt ````. To visualize the saved data, use the following command in the Control-and-Trajectory-Tracking-for-Autonomous-Vehicles/project directory:
+
+ ````python plot_pid.py  ````
