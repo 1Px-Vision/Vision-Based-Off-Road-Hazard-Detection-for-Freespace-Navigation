@@ -7,9 +7,9 @@ In this project, a PID controller is designed to perform vehicle trajectory trac
 Run the following commands to install the code:
 
 Clone the repository:
-
+````
 git clone https://github.com/atanasko/Control-an-Trajectory-Tracking-forAutonomous-Vehicles.git
-
+````
 ### Run Carla Simulator
 Open new window
 ````
