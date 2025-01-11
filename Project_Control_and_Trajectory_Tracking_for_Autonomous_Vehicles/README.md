@@ -8,7 +8,7 @@ Run the following commands to install the code:
 
 Clone the repository:
 ````
-git clone https://github.com/atanasko/Control-an-Trajectory-Tracking-forAutonomous-Vehicles.git
+git clone https://github.com/udacity/nd013-c6-control-starter.git
 ````
 ### Run Carla Simulator
 Open new window
