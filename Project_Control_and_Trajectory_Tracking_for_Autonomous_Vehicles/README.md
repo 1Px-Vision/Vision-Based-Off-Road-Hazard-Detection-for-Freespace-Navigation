@@ -10,6 +10,27 @@ Clone the repository:
 
 git clone https://github.com/atanasko/Control-an-Trajectory-Tracking-forAutonomous-Vehicles.git
 
+### Run Carla Simulator
+Open new window
+````
+su - student
+cd /opt/carla-simulator/
+SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
+````
+
+### Compile and Run the Controller
+Open new window
+````
+cd nd013-c6-control-starter/project
+./install-ubuntu.sh
+cd pid_controller/
+rm -rf rpclib
+git clone https://github.com/rpclib/rpclib.git
+mkdir build
+cd build
+cmake .
+make
+````
 ## Project Instructions
 
 In the previous project, a path planner for the autonomous vehicle was built. Now, a steering and throttle controller is developed to enable the car to follow the planned trajectory.
