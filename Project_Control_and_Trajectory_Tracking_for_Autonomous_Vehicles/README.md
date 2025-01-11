@@ -9,4 +9,5 @@ In the previous project, a path planner for the autonomous vehicle was built. No
 
 A PID controller is designed and implemented as outlined.
 
-In the /pid_controller directory, you will find the files pid.cpp and pid.h, where you will implement your PID controller. The pid function is invoked in main.cpp.
+In the ````/pid_controller```` directory, you will find the files ````pid.cpp```` and ````pid.h````, where you will implement your PID controller. The pid function is invoked in main.cpp.
+
