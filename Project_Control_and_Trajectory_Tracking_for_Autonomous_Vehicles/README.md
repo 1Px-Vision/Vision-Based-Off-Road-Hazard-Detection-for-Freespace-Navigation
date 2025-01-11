@@ -19,5 +19,18 @@ In the ````/pid_controller```` directory, you will find the files ````pid.cpp```
 
 ![test_PID](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Test_PID_1.jpg)
 
+### Step 2: Implementing the PID Controller for Throttle
+In ````main.cpp````, complete the TODO (Step 2) to calculate the error for the throttle PID controller. The error should represent the difference between the actual speed and the desired speed.
 
+**Useful Variables:**
 
+The last point in the ````v_points```` vector contains the velocity determined by the path planner.
+velocity stores the current actual ````velocity````.
+
+**Key Requirements:**
+
+Ensure the output of the controller stays within the range ````[-1, 1]````.
+Add comments to your code explaining the reasoning behind your method for calculating the error.
+
+**Tuning:**
+Adjust the PID parameters until you achieve satisfactory results. Note that a perfect trajectory is not required—focus on achieving a reasonable outcome.
