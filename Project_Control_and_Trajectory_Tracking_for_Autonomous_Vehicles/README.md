@@ -104,6 +104,26 @@ Include the generated plots in your report and describe their contents.
 * The plots display the error and control output for throttle and steering.
 * Analyze what these plots reveal about the system's behavior.
 
+**What is the effect of the PID according to the plots? How does each part of the PID affect the control command?**
+
+* The P (Proportional) component is directly proportional to the error and responds relative to the current deviation.
+* The D (Derivative) component helps reduce oscillations by reacting to the rate of error change.
+* The I (Integral) component improves convergence by addressing accumulated errors over time.
+
+**How would you design a method to automatically tune the PID parameters?**
+
+Use the Twiddle (Coordinate Ascent) algorithm to automatically optimize the PID parameters. This algorithm iteratively adjusts the parameters to minimize the error.
+
+**PID controllers are model-free controllers, meaning they do not rely on a model of the system. Could you explain the pros and cons of this type of controller?**
+
+**Pros:**
+* Easy to develop and implement, as it does not require a precise model of the car.
+* Can be applied to a wide range of systems without extensive modeling efforts.
+
+**Cons:**
+* Lacks consideration of the system's dynamics, which may result in suboptimal performance.
+* May struggle with complex systems where a model-based approach could yield better results.
+
 # Included in this repository
 The project introduces the following modified files (pid_controller/ directory):
 
