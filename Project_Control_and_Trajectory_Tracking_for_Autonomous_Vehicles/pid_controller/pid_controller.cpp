@@ -47,7 +47,7 @@ double PID::TotalError() {
    */
     double control;
 
-    control=kp*p_error+Kd*d_error+Ki*i_error;
+    control=Kp*p_error+Kd*d_error+Ki*i_error;
     if(control<min_lim)
     {
         control=min_lim;
