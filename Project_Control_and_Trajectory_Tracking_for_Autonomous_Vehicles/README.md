@@ -87,3 +87,6 @@ Adjust the PID parameters until you achieve satisfactory results. Note that whil
 The error values and PID commands are saved in  ````throttle_data.txt ```` and  ````steer_data.txt ````. To visualize the saved data, use the following command in the Control-and-Trajectory-Tracking-for-Autonomous-Vehicles/project directory:
 
  ````python plot_pid.py  ````
+
+# Included in this repository
+The project introduces the following modified files:
