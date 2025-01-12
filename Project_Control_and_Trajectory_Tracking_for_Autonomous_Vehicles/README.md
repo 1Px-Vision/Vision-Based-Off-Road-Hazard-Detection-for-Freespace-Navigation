@@ -89,4 +89,8 @@ The error values and PID commands are saved in  ````throttle_data.txt ```` and  
  ````python plot_pid.py  ````
 
 # Included in this repository
-The project introduces the following modified files:
+The project introduces the following modified files (pid_controller directory):
+
+* main.cpp
+* pid_controller.cpp
+* pid_controller.h
