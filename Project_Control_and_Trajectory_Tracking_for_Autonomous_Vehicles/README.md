@@ -124,6 +124,11 @@ Use the Twiddle (Coordinate Ascent) algorithm to automatically optimize the PID 
 * Lacks consideration of the system's dynamics, which may result in suboptimal performance.
 * May struggle with complex systems where a model-based approach could yield better results.
 
+**(Optional) What would you do to improve the PID controller?**
+We need to accelerate the simulation process. One way to achieve this could be by disabling the graphical components of the simulation, allowing it to run faster while maintaining its realism and accuracy. Simulated time can be stretched or compressed without affecting the outcomes, enabling us to conduct a large number of experiments efficiently. By varying parameters and selecting those with the smallest RMSE, we can optimize the system's performance. Starting from multiple hyperpoints, we can observe where they converge to local optima and, from these, select the best optimum—this process resembles evolution by natural selection.
+
+My approach using vector fields with the average waypoint has proven to be more effective than the approach using vector fields with the closest waypoint, primarily due to its predictive nature. However, I have a new approach I would like to test, time permitting. This approach involves vector fields based on smooth trajectories formed by the closest waypoints. Additionally, I haven't yet explored incorporating a memory of the waypoints. This could help the car recover if it falls significantly behind the waypoints, ensuring it stays on track without losing its path.
+
 # Included in this repository
 The project introduces the following modified files (pid_controller/ directory):
 
