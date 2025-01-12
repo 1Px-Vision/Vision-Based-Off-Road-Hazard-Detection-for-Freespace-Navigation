@@ -92,6 +92,9 @@ The error values and PID commands are saved in  ````throttle_data.txt ```` and  
 
 # Results
 
+![Result_Error_Steering](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Result_Error_Steering.jpg)
+
+![Result_Error_Throttle](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Result_Error_Throttle.jpg)
 
 # Included in this repository
 The project introduces the following modified files (pid_controller/ directory):
