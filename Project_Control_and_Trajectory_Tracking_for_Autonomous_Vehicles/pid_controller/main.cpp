@@ -225,10 +225,10 @@ int main ()
   **/
 
   PID pid_steer = PID();
-  pid_steer.Init(0.3,0.001,0.3,1.2,-1.2);
+  pid_steer.Init(0.3,0.01,0.4,1.2,-1.2);
 
   PID pid_throttle = PID();
-  pid_throttle.Init(0.2,0.0009,0.1,1.0,-1.0);
+  pid_throttle.Init(0.35,0.01,0.2,1.0,-1.0);
 
   h.onMessage([&pid_steer, &pid_throttle, &new_delta_time, &timer, &prev_timer, &i, &prev_timer](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode)
   {
@@ -296,30 +296,22 @@ int main ()
           // Compute steer error
           double error_steer;
           double steer_output;
-          int closest_point_idx = x_points.size() - 1;
-          double closest_point_distance = std::numeric_limits<double>::max();
+ 
 
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
+          error_steer = 0;
           
-          for (int i = 0; i < x_points.size(); ++i) {
-              double distance;
-            
-              closest_point_distance = std::hypot(x_points[closest_point_idx] - x_position, y_points[closest_point_idx] - y_position);
-              distance = std::hypot(x_points[i] - x_position, y_points[i] - y_position);
-              if(distance < closest_point_distance) {
-                  closest_point_idx = i;
-                  closest_point_distance = distance;
-              }
-          }
-
-          cout << "closest_point_idx: " << closest_point_idx << " x_position: " << x_position << " x_points[closest_point_idx]: " << x_points[closest_point_idx] << endl;
-
-          double yaw_desired = angle_between_points(x_position, y_position, x_points[closest_point_idx], y_points[closest_point_idx]);
-          error_steer = yaw_desired - yaw;
-
-
+          Vector2D *location = new Vector2D(x_position, y_position);
+          WayPoints way_points = WayPoints(x_points, y_points, v_points);
+          double current_steering = correct_angle(yaw);
+          int n_spirals = spirals_x.size();
+          Recommendation recommendation = way_points.compute_recommendation(location, current_steering, velocity, n_spirals);
+          double desired_steering = recommendation.steering;
+          double desired_speed = recommendation.speed;
+          // The explanation of this calculation is in the README.md file of the github repository, section "Mathematical explanation of the vectorial fields".
+          error_steer = correct_angle(desired_steering - current_steering); 
 
           /**
           * TODO (step 3): uncomment these lines
@@ -353,7 +345,8 @@ int main ()
           * TODO (step 2): compute the throttle error (error_throttle) from the position and the desired speed
           **/
           // modify the following line for step 2
-          error_throttle = v_points[closest_point_idx]-velocity;
+          error_throttle =0;
+          error_throttle = desired_speed - velocity;
 
           double throttle_output;
           double brake_output;
