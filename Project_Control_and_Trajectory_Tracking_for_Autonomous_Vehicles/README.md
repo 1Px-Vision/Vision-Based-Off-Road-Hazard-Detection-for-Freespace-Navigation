@@ -101,8 +101,8 @@ The error values and PID commands are saved in  ````throttle_data.txt ```` and  
 **Add the plots to your report and explain them.**
 Include the generated plots in your report and describe their contents.
 
-The plots display the error and control output for throttle and steering.
-Analyze what these plots reveal about the system's behavior.
+* The plots display the error and control output for throttle and steering.
+* Analyze what these plots reveal about the system's behavior.
 
 # Included in this repository
 The project introduces the following modified files (pid_controller/ directory):
