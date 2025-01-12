@@ -57,7 +57,7 @@ velocity stores the current actual ````velocity````.
 
 **Key Requirements:**
 
-Ensure the output of the controller stays within the range ````[-1, 1]````.
+Ensure the controller's output stays within the range ````[-1, 1]````.
 Add comments to your code explaining the reasoning behind your method for calculating the error.
 
 **Tuning:**
@@ -91,8 +91,19 @@ The error values and PID commands are saved in  ````throttle_data.txt ```` and  
  ````
 
 # Results
+## Vectorial fields
+
+In dynamical systems and differential equations, PID controllers are easier to calibrate when goal states are defined using vector fields. To leverage this, I implemented two vector fields to program the PID controllers responsible for the steering and throttle of self-driving cars.
+
+### Steering Error
+
+The **steering error** is defined as the difference between the current steering angle and the desired steering angle suggested by the vector field. The vector field determines the desired steering based on the flow direction from an average waypoint to the first or last waypoint of the trajectory. Additionally, the vector field generates an orthonormal basis using this flow direction and provides a steering adjustment if the car’s projected position falls into the left or right quadrants relative to the basis. The combination of the recommended steering direction and the compensation adjustment acts as a strong attractor, guiding the car along the correct path. Importantly, the car predicts the future recommended steering direction, rather than reacting to the closest waypoint in the present. This forward prediction significantly improves performance.
 
 ![Result_Error_Steering](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Result_Error_Steering.jpg)
+
+### Throttle Error
+
+The **throttle error** is defined as the difference between the current speed and the desired speed suggested by the vector field. The vector field recommends the desired speed as the average speed of the average waypoint. Similar to steering, the vector field constructs an orthonormal basis using the flow direction and adjusts the speed if the car’s projected position falls into the forward or backward quadrants relative to this basis. The combination of the recommended speed and the speed compensation creates an attractor that keeps the car moving toward the average waypoint, ensuring it stays on track. By predicting future states and using vector fields for both steering and throttle control, these methods provide robust guidance and improve the stability and accuracy of self-driving cars.
 
 ![Result_Error_Throttle](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Control_and_Trajectory_Tracking_for_Autonomous_Vehicles/Media/Result_Error_Throttle.jpg)
 
