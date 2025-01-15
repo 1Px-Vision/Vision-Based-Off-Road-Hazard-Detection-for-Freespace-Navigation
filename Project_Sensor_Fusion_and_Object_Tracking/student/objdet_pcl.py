@@ -38,28 +38,27 @@ def show_pcl(pcl):
     print("student task ID_S1_EX2")
 
     # step 1 : initialize open3d with key callback and create window
-    global first_frame
-    def key_callback(vis):
-        vis.destroy_window()
+    vis=o3d.visualization.VisualizerWithKeyCallback()
+    vis.create_window(window_name='Open3D', width=1280, height=1080, left=50, top=50, visible=True)
 
-    if first_frame:
-        vis.create_window()
-        vis.register_key_callback(262, key_callback)
     # step 2 : create instance of open3d point-cloud class
     pcd = o3d.geometry.PointCloud()
+
     # step 3 : set points in pcd instance by converting the point-cloud into 3d vectors (using open3d function Vector3dVector)
     pcd.points = o3d.utility.Vector3dVector(pcl[:, :3])
     # step 4 : for the first frame, add the pcd instance to visualization using add_geometry; for all other frames, use update_geometry instead
-    if first_frame:
-        vis.add_geometry(pcd)
-        first_frame = False
-    else:
-        vis.clear_geometries()
-        vis.add_geometry(pcd)
+    o3d.visualization.draw_geometries([pcd])
+    vis.add_geometry(pcd)
+    vis.update_renderer() 
+    vis.update_geometry(pcd)
         
     # step 5 : visualize point cloud and keep window open until right-arrow is pressed (key-code 262)
+    def exit_key_vis(vis):
+        vis.destroy_window()
+
+    vis.register_key_callback(262,exit_key)
     vis.poll_events()
-    vis.update_renderer() 
+  
     #######
     ####### ID_S1_EX2 END #######     
 # visualize range image
