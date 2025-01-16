@@ -216,18 +216,19 @@ def detect_objects(input_bev_maps, model, configs):
     # Extract 3d bounding boxes from model response
     print("student task ID_S3_EX2")
     objects = [] 
+    
     ## step 1 : check whether there are any detections
-    for det in detections:
+    if len(detections)>0:
         ## step 2 : loop over all detections
-        for obj in det[1]:
-            _id, _x, _y, _z, _h, _w, _l, _yaw = obj
+        for object in detections:
+            id, bev_x, bev_y, bev_z, h, bev_w, bev_l, yaw = object
 
-            ## step 3 : perform the conversion using the limits for x, y and z set in the configs structure
 	    x = bev_y / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
             y = bev_x / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) - (configs.lim_y[1] - configs.lim_y[0])/2.0 
             w = bev_w / configs.bev_width * (configs.lim_y[1] - configs.lim_y[0]) 
             l = bev_l / configs.bev_height * (configs.lim_x[1] - configs.lim_x[0])
 
+	    ## step 3 : perform the conversion using the limits for x, y and z set in the configs structure
             if ((x >= configs.lim_x[0]) and (x <= configs.lim_x[1])
                 and (y >= configs.lim_y[0]) and (y <= configs.lim_y[1])
                 and (z >= configs.lim_z[0]) and (z <= configs.lim_z[1])):

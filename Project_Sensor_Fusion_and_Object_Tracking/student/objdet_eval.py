@@ -48,29 +48,25 @@ def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5)
             print("student task ID_S4_EX1 ")
 
             ## step 1 : extract the four corners of the current label bounding-box
-            gt_bbox = label.box
-            gt_box = tools.compute_box_corners(gt_bbox.center_x, gt_bbox.center_y, gt_bbox.width, gt_bbox.length, gt_bbox.heading)
+            label_box = label.box
+            Label_corners = tools.compute_box_corners(label_box.center_x, label_box.center_y, label_box.width, label_box.length, label_box.heading)
 
             ## step 2 : loop over all detected objects
             for obj in detections:
                 ## step 3 : extract the four corners of the current detection
-                _id, x, y, z, _h, w, l, yaw = obj
-                d_box = tools.compute_box_corners(x, y, w, l, yaw)
+                class_id, x, y, z, _h, w, l, yaw = obj
+                detection_corners  = tools.compute_box_corners(x, y, w, l, 0)
 
                 ## step 4 : computer the center distance between label and detection bounding-box in x, y, and z
-                dist_x = np.array(gt_bbox.center_x - x).item()
-                dist_y = np.array(gt_bbox.center_y - y).item()
-                dist_z = np.array(gt_bbox.center_z - z).item()
+                distance=np.array([label_box.center_x, label_box.center_y, label_box.center_z])-np.array([x,y,z])
 
                 ## step 5 : compute the intersection over union (IOU) between label and detection bounding-box
-                try:
-                    poly_gt_box = Polygon(gt_box)
-                    poly_d_box = Polygon(d_box)
-                    intersection = poly_gt_box.intersection(poly_d_box).area
-                    union = poly_gt_box.union(poly_d_box).area
-                    iou = intersection / union
-                except Exception as err:
-                    print("Error in computation", err)
+                label_poly = Polygon(Label_corners)
+                detection_poly = Polygon(detection_corners)
+                intersection = detection_poly.intersection(label_poly)
+                union = detection_poly.union(label_poly)
+                iou = intersection.area / union.area
+            
 
                 ## step 6 : if IOU exceeds min_iou threshold, store [iou,dist_x, dist_y, dist_z] in matches_lab_det and increase the TP count
                 if iou > min_iou:
@@ -91,15 +87,12 @@ def measure_detection_performance(detections, labels, labels_valid, min_iou=0.5)
     print("student task ID_S4_EX2")
     # compute positives and negatives for precision/recall
     ## step 1 : compute the total number of positives present in the scene
-    # all_positives = 0
     all_positives = labels_valid.sum()
 
     ## step 2 : compute the number of false negatives
-    # false_negatives = 0
     false_negatives = all_positives - true_positives
 
     ## step 3 : compute the number of false positives
-    # false_positives = 0
     false_positives = len(detections) - true_positives
 
     #######
