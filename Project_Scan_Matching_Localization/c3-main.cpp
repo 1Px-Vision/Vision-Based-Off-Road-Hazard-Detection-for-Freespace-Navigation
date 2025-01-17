@@ -107,6 +107,50 @@ Eigen::Matrix4d ICP(PointCloudT::Ptr target, PointCloudT::Ptr source, Pose start
 
 }
 
+/**
+ * @brief Normal Distributions Transform (NDT) registration between a given source point cloud and a target map point cloud.
+ *
+ * It estimates the transformation matrix that aligns the source cloud to the target using an initial pose guess.
+ * 
+ * @param mapCloud → Pointer to the target point cloud (reference map).
+ * @param source → Pointer to the source point cloud (to be aligned).
+ * @param startingPose → Initial pose estimate for the transformation.
+ * @return 4×4 transformation matrix (Eigen::Matrix4d) representing the alignment of source to mapCloud.
+ */
+
+Eigen::Matrix4d NDT(PointCloudT::Ptr mapCloud, PointCloudT::Ptr source, Pose startingPose)
+{
+	pcl::NormalDistributionsTransform<pcl::PointXYZ, pcl::PointXYZ> ndt;
+
+	// Setting minimum transformation difference for termination condition.
+	ndt.setTransformationEpsilon(1e-8);
+
+	// Setting Resolution of NDT grid structure (VoxelGridCovariance).
+	ndt.setResolution(1);
+	ndt.setInputTarget(mapCloud);
+
+	pcl::console::TicToc time;
+	time.tic();
+
+	Eigen::Matrix4f init_guess = transform3D(startingPose.rotation.yaw, startingPose.rotation.pitch, startingPose.rotation.roll, startingPose.position.x, startingPose.position.y, startingPose.position.z).cast<float>();
+
+	// ndt.setTransformationEpsilon(0.0000001);
+	// Setting max number of registration iterations.
+	int max_iterations = 4;
+	ndt.setMaximumIterations(max_iterations);
+	ndt.setInputSource(source);
+
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_ndt(new pcl::PointCloud<pcl::PointXYZ>);
+	ndt.align(*cloud_ndt, init_guess);
+
+	cout << "Normal Distributions Transform has converged:" << ndt.hasConverged() << " score: " << ndt.getFitnessScore() << " time: " << time.toc() << " ms" << endl;
+
+	Eigen::Matrix4d transformation_matrix = ndt.getFinalTransformation().cast<double>();
+
+	return transformation_matrix;
+}
+
+
 void Accuate(ControlState response, cc::Vehicle::Control& state){
 
 	if(response.t > 0){
@@ -195,8 +239,8 @@ int main(){
 		if(new_scan){
 			auto scan = boost::static_pointer_cast<csd::LidarMeasurement>(data);
 			for (auto detection : *scan){
-				if((detection.point.x*detection.point.x + detection.point.y*detection.point.y + detection.point.z*detection.point.z) > 8.0){ // Don't include points touching ego
-					pclCloud.points.push_back(PointT(detection.point.x, detection.point.y, detection.point.z));
+				if((detection.x*detection.x + detection.y*detection.y + detection.z*detection.z) > 8.0){ 
+					pclCloud.points.push_back(PointT(detection.x, detection.y, detection.z));
 				}
 			}
 			if(pclCloud.points.size() > 5000){ // CANDO: Can modify this value to get different scan resolutions
@@ -253,7 +297,7 @@ int main(){
             		vg.filter(*cloudFiltered);
 
 			// TODO: Find pose transform by using ICP or NDT matching
-            		Eigen::Matrix4d transform = ICP(mapCloud, cloudFiltered, pose, 10);
+            		Eigen::Matrix4d transform = ICP(mapCloud, cloudFiltered, pose, 20);//NDT(mapCloud, FilterCloud, pose)
             		pose = getPose(transform);
 
 			// TODO: Transform scan so it aligns with ego's actual pose and render that scan
