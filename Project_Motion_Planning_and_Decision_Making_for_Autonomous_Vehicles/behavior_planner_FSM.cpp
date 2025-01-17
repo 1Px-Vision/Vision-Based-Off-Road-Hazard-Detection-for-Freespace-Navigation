@@ -141,16 +141,16 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
       // use cosine and sine to get x and y
       //
       auto ang = goal.rotation.yaw + M_PI;
-      goal.location.x += goal.location.x+(_stop_line_buffer*std::cos(ang));  // <- Fix This
-      goal.location.y +=goal.location.y+(_stop_line_buffer*std::sin(ang));  // <- Fix This
+      goal.location.x += _stop_line_buffer*std::cos(ang); 
+      goal.location.y +=_stop_line_buffer*std::sin(ang);
 
       // LOG(INFO) << "BP- new STOP goal at: " << goal.location.x << ", "
       //          << goal.location.y;
 
       // TODO-goal speed at stopping point: What should be the goal speed??
-      goal.velocity.x = 0.0;  // <- Fix This
-      goal.velocity.y = 0.0;  // <- Fix This
-      goal.velocity.z = 0.0;  // <- Fix This
+      goal.velocity.x = 0.0; 
+      goal.velocity.y = 0.0;  
+      goal.velocity.z = 0.0;  
 
     } else {
       // TODO-goal speed in nominal state: What should be the goal speed now
@@ -167,7 +167,7 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
     // TODO-maintain the same goal when in DECEL_TO_STOP state: Make sure the
     // new goal is the same as the previous goal (_goal). That way we
     // keep/maintain the goal at the stop line.
-       goal = _goal;  // <- Fix This
+       goal = _goal;  
 
     // TODO: It turns out that when we teleport, the car is always at speed
     // zero. In this the case, as soon as we enter the DECEL_TO_STOP state,
@@ -182,12 +182,10 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
     // LOG(INFO) << "Ego distance to stop line: " << distance_to_stop_sign;
 
     // TODO-use distance rather than speed: Use distance rather than speed...
-    if (utils::magnitude(ego_state.velocity) <=
-        _stop_threshold_speed) {  // -> Fix this
-      // if (distance_to_stop_sign <= P_STOP_THRESHOLD_DISTANCE) {
+      if (distance_to_stop_sign <= P_STOP_THRESHOLD_DISTANCE) {
       // TODO-move to STOPPED state: Now that we know we are close or at the
       // stopping point we should change state to "STOPPED"
-      _active_maneuver = STOPPED;  // <- Fix This
+      _active_maneuver = STOPPED;  
       _start_stop_time = std::chrono::high_resolution_clock::now();
       // LOG(INFO) << "BP - changing to STOPPED";
     }
