@@ -7,6 +7,7 @@ The project aims to accurately localize a car driving in a simulation at least 1
 ## Iterative Closest Point (ICP) alignment between a target and source point cloud.
 This function computes the transformation matrix that aligns the source point cloud to the target point cloud using the PCL (Point Cloud Library) ICP implementation. It considers a starting pose for initialization and applies ICP for a specified number of iterations.
 
+![Result_ICP](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Scan_Matching_Localization/Media/Result_Scan.jpg)
 
 ## Included in this repository
 The project introduces the following modified files:
