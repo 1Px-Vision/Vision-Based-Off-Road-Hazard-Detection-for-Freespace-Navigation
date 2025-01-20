@@ -22,3 +22,6 @@ Enter end y in range of 0 to 100: 50
 end y is 50
 Distance: 297.188 meters. 
 ````
+
+![Result_planning](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20OpenStreetMap%20Route%20Planner/Result_Route_Planning.jpg)
+
