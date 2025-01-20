@@ -4,6 +4,17 @@ Create a route planner that maps a path between two locations using real-world m
 
 ![map_render](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20OpenStreetMap%20Route%20Planner/map_render.jpg)
 
+## Code Overview
+The Main function initializes a RouteModel object using OpenStreetMap data.
+
+* The ````RouteModel```` class serves as a structured data container, organizing the map data efficiently while providing essential methods for data manipulation.
+* Within ````RouteModel````, there is a subclass called Node, representing individual points on the map.
+* A key method in ````RouteModel```` is ````find_closest_node````, which locates the nearest stored node to a given set of coordinates the user provides.
+
+Once Main has instantiated the ````RouteModel````, it proceeds to create a RoutePlanner object.
+
+* The ````RoutePlanner```` class is responsible for implementing the ````A* search```` algorithm and includes all necessary methods for pathfinding.
+* The primary method within ````RoutePlanner```` is a_star_search, which is invoked by Main to execute the search algorithm.
 
 ## Using the Route Planner
 
