@@ -16,6 +16,8 @@ Once Main has instantiated the ````RouteModel````, it proceeds to create a Route
 * The ````RoutePlanner```` class is responsible for implementing the ````A* search```` algorithm and includes all necessary methods for pathfinding.
 * The primary method within ````RoutePlanner```` is a_star_search, which is invoked by Main to execute the search algorithm.
 
+![Road](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20OpenStreetMap%20Route%20Planner/OSM_Route_Planner_Code_Structure.jpg)
+
 ## Using the Route Planner
 
 After compiling and running the program, you will be prompted to enter four coordinates from 0 to 99: start x, start y, end x, and end y. The program then calculates the distance between the specified points and visually renders the route from the starting position to the destination on the map.
