@@ -40,3 +40,5 @@ Distance: 297.188 meters.
 
 # Included in this repository
 The project introduces the following modified files:
+* CMakeLists.txt
+* main.cpp (Directory src/)
