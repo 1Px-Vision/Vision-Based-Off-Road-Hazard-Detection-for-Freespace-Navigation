@@ -9,6 +9,9 @@
 #include "route_planner.h"
 
 using namespace std::experimental;
+using std::cout;
+using std::cin;
+using std::endl;
 
 static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
 {   
@@ -26,6 +29,24 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
         return std::nullopt;
     return std::move(contents);
 }
+static float FromUserInput(const std::string name)
+{
+    float value=-1;
+    std::string input;
+     while (value < 0 || value > 100) {
+    std::cout << "Enter " << name << " in range of 0 to 100: ";
+    std::cin >> input;
+    try {
+      value = std::stoi(input);
+    } catch (...) {
+      // ignore bad input, and repeat
+    }
+  }
+  std::cout << name << " is " << value << std::endl;
+  return value;
+
+}
+
 
 int main(int argc, const char **argv)
 {    
@@ -51,16 +72,19 @@ int main(int argc, const char **argv)
         else
             osm_data = std::move(*data);
     }
-    
+    //Complete this TODO to satisfy Project Rubric Criterias of User Input
+       
     // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
-    // user input for these values using std::cin. Pass the user input to the
-    // RoutePlanner object below in place of 10, 10, 90, 90.
+    float start_x=FromUserInput("start x");
+    float start_y=FromUserInput("start y");
+    float end_x=FromUserInput("end x");
+    float end_y=FromUserInput("end y");
 
     // Build Model.
     RouteModel model{osm_data};
 
     // Create RoutePlanner object and perform A* search.
-    RoutePlanner route_planner{model, 10, 10, 90, 90};
+    RoutePlanner route_planner{model,start_x,start_y,end_x,end_y};
     route_planner.AStarSearch();
 
     std::cout << "Distance: " << route_planner.GetDistance() << " meters. \n";
