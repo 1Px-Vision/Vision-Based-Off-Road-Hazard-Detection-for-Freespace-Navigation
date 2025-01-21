@@ -39,7 +39,8 @@ Implement the ````manage_tracks()```` function to perform the following tasks:
 * Implement the ````handle_updated_track()```` function to:
     * Increase the track score for the given track.
     * Update the track state to either 'tentative' or 'confirmed', depending on the track score.
-* Use ````numpy.matrix()```` for all matrix operations, as covered in the exercises. 
+* Use ````numpy.matrix()```` for all matrix operations, as covered in the exercises.
+  
 ### Camera Fusion
 * In the Sensor class, implemented the ````in_fov()```` function to determine whether an object's state ````vector (x)```` is visible to the sensor.
     * First, the state vector is transformed from vehicle coordinates to sensor coordinates.
@@ -54,9 +55,9 @@ Implement the ````manage_tracks()```` function to perform the following tasks:
 * Modified ````generate_measurement()```` in the Sensor class to include camera measurements, removing the restriction to LiDAR-only data.
   
 * In the Measurement class, initialized camera measurement objects with:
-      *  Measurement vector (````z````)
-      *  Measurement noise covariance (````R````)
-      *  Sensor object (````sensor````)
+      *Measurement vector (````z````)
+      *Measurement noise covariance (````R````)
+      *Sensor object (````sensor````)
   
 ### Challenges & Debugging Notes
 
