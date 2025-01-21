@@ -7,6 +7,8 @@
    
 **2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?**
 
+![RMSE](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Step1_1.png)
+
 The visualization is intended to demonstrate that no confirmed "ghost tracks" exist in reality. While initialized or tentative ghost tracks may appear temporarily, they should be removed after a few frames. If any remain, sensor fusion with a camera can be used to invalidate them. The console output displays LiDAR updates followed by camera updates, reinforcing that the tracking system performs well. No confirmed ghost tracks or track losses should occur. The RMSE plot should confirm at least three tracked objects, with two of them continuously tracked from the start (0s) to the end (200s) of the sequence without interruption. The mean RMSE for these two tracks should remain below 0.25.
 
 **3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?**
