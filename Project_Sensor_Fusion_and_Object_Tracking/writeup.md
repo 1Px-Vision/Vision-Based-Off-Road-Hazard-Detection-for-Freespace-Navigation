@@ -53,9 +53,10 @@ Implement the ````manage_tracks()```` function to perform the following tasks:
 
 * Modified ````generate_measurement()```` in the Sensor class to include camera measurements, removing the restriction to LiDAR-only data.
 * In the Measurement class, initialized camera measurement objects with:
-      * Measurement vector (````z````)
-      * Measurement noise covariance (````R````)
-      * Sensor object (````sensor````)
+      *  Measurement vector (````z````)
+      *  Measurement noise covariance (````R````)
+      *  Sensor object (````sensor````)
+  
 ### Challenges & Debugging Notes
 
 * **Step 2:** Track Management was particularly challenging. The Root Mean Square Error (RMSE) in this step is quite high (~0.78). Additionally, the green bounding boxes in the visualization do not align properly with the vehicles in the image.
