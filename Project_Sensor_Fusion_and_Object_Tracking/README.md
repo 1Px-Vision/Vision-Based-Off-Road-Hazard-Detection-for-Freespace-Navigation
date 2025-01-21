@@ -21,6 +21,8 @@ This project utilizes the Waymo Open Dataset, leveraging real-world data collect
     * Normalizing the height within each BEV map pixel.
     * Filling the "height" channel. (Task ID: S2_EX3)
 
+![BEV](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Section_2.jpg)
+
 ## Section 3: Model-Based Object Detection in BEV Images
 1. Implement Complex YOLO and extract the output decoding and post-processing code from the GitHub repository. (Task ID: S3_EX1)
 2. Transform BEV coordinates and convert the model output to the expected bounding box format. (Task ID: S3_EX2) 
