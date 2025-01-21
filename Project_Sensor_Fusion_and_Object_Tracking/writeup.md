@@ -7,6 +7,8 @@
    
 **2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?**
 
+The visualization is intended to demonstrate that no confirmed "ghost tracks" exist in reality. While initialized or tentative ghost tracks may appear temporarily, they should be removed after a few frames. If any remain, sensor fusion with a camera can be used to invalidate them. The console output displays LiDAR updates followed by camera updates, reinforcing that the tracking system performs well. No confirmed ghost tracks or track losses should occur. The RMSE plot should confirm at least three tracked objects, with two of them continuously tracked from the start (0s) to the end (200s) of the sequence without interruption. The mean RMSE for these two tracks should remain below 0.25.
+
 **3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?**
 
 **At Step 2:** Track Management, the RMSE is relatively high in this scenario (approximately 0.78). Additionally, the green bounding boxes do not accurately align with the car in the image. This discrepancy highlights a common real-world challenge: our assumptions about the data are not always perfectly met. However, we can mitigate this offset through sensor fusion by integrating additional sensor inputs. To further diagnose the issue, there may be an error in the association matrix or in the process of removing used rows and columns. Printing the association matrix for further debugging will help identify and resolve the problem.
