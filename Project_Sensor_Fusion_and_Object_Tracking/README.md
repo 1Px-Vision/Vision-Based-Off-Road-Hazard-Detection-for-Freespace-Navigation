@@ -34,6 +34,8 @@ This project utilizes the Waymo Open Dataset, leveraging real-world data collect
 2. Compute false negatives and false positives based on the Intersection over Union (IoU) and ground-truth labels. (Task ID: S4_EX2)
 3. Calculate the precision and recall metrics for all frames. (Task ID: S4_EX3)
 
+![Result_Prob](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Section_4.jpg)
+
 # Sensor Fusion and Tracking
 
 In this project, you will integrate measurements from LiDAR and cameras to track vehicles over time. Using real-world data from the [Waymo Open Dataset](https://waymo.com/open/), the objectives include detecting objects in 3D point clouds and implementing an extended Kalman filter for sensor fusion and vehicle tracking.
