@@ -110,7 +110,7 @@ Tracking Pipeline Steps:
 
 ## Benefits of Camera-Lidar Fusion
 ### Theoretical Benefits
-* Combines the strengths of both sensors: lidar provides precise depth information, while the camera offers rich texture and color data.
+* It combines the strengths of both sensors: the lidar provides precise depth information, while the camera offers rich texture and color data.
 * Increased robustness in detecting partially occluded or distant objects.
 ### Concrete Results
 * Reduced RMSE in object tracking scenarios.
@@ -124,6 +124,12 @@ Tracking Pipeline Steps:
 
 ## Included in this repository
 The project introduces the following modified files (student directory):
+
+### Mid-Term Project: 3D Object Detection
+* objdet_pcl.py
+* objdet_detect.py
+* objdet_eval.py
+* 
 ### Final Project: Sensor Funsion and Object Tracking
 * loop_over_dataset.py
 * filter.py
@@ -131,7 +137,3 @@ The project introduces the following modified files (student directory):
 * association.py
 * measurements.py
 
-### Mid-Term Project: 3D Object Detection
-* objdet_pcl.py
-* objdet_detect.py
-* objdet_eval.py
