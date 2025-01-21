@@ -15,6 +15,15 @@ This project utilizes the Waymo Open Dataset, leveraging real-world data collect
     * Normalizing the height within each BEV map pixel.
     * Filling the "height" channel. (Task ID: S2_EX3)
 
+## Section 3: Model-Based Object Detection in BEV Images
+1. Implement Complex YOLO and extract the output decoding and post-processing code from the GitHub repository. (Task ID: S3_EX1)
+2. Transform BEV coordinates and convert the model output to the expected bounding box format. (Task ID: S3_EX2) 
+
+## Section 4: Performance Evaluation for Object Detection
+1. Compare ground-truth labels with detected objects to count true positives. (Task ID: S4_EX1)
+2. Compute false negatives and false positives based on the Intersection over Union (IoU) and ground-truth labels. (Task ID: S4_EX2)
+3. Calculate the precision and recall metrics for all frames. (Task ID: S4_EX3)
+
 # Sensor Fusion and Tracking
 
 In this project, you will integrate measurements from LiDAR and cameras to track vehicles over time. Using real-world data from the [Waymo Open Dataset](https://waymo.com/open/), the objectives include detecting objects in 3D point clouds and implementing an extended Kalman filter for sensor fusion and vehicle tracking.
