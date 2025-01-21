@@ -129,7 +129,7 @@ The project introduces the following modified files (student directory):
 * objdet_pcl.py
 * objdet_detect.py
 * objdet_eval.py
-* 
+  
 ### Final Project: Sensor Funsion and Object Tracking
 * loop_over_dataset.py
 * filter.py
