@@ -24,8 +24,8 @@
 * **Step 2:** Track Management was particularly challenging. The Root Mean Square Error (RMSE) in this step is quite high (~0.78). Additionally, the green bounding boxes in the visualization do not align properly with the vehicles in the image.
 
 * **Step 3: Association**
-
-* The console output indicates that a single measurement was used multiple times, suggesting an error in the association matrix or in the deletion of used rows/columns. Further debugging is required by printing the association matrix to examine incorrect associations.
+    * The console output indicates that a single measurement was used multiple times, suggesting an error in the association matrix or in the deletion of used rows/columns.
+    *  Further debugging is required by printing the association matrix to examine incorrect associations.
    
 **2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?**
 
@@ -39,5 +39,4 @@ The visualization is intended to demonstrate that no confirmed "ghost tracks" ex
 
 **4. Can you think of ways to improve your tracking results in the future?**
 
-Fine-tune the parameterization and explore how low the RMSE can be reduced! Utilize the standard deviation values for LiDAR obtained from the mid-term project. The parameters in ````student/params.py```` should allow for an initial tracking run, but significant improvements can be achieved through careful parameter tuning.
- Enhance the data association by implementing a more advanced method, such as Global Nearest Neighbor (GNN) or Joint Probabilistic Data Association (JPDA). Integrate camera detections from Project 1 into the tracking pipeline to improve accuracy and robustness. Modify the Kalman filter to estimate an object's width, length, and height, rather than relying solely on unfiltered LiDAR detections as done previously. Replace the linear motion model with a non-linear approach, such as a bicycle model, which better represents vehicle dynamics by accounting for the fact that a vehicle moves forward or backward rather than in arbitrary directions.   
+Fine-tune the parameterization and explore how low the RMSE can be reduced! Utilize the standard deviation values for LiDAR obtained from the mid-term project. The parameters in ````student/params.py```` should allow for an initial tracking run, but significant improvements can be achieved through careful parameter tuning. Enhance the data association by implementing a more advanced method, such as Global Nearest Neighbor (GNN) or Joint Probabilistic Data Association (JPDA). Integrate camera detections from Project 1 into the tracking pipeline to improve accuracy and robustness. Modify the Kalman filter to estimate an object's width, length, and height, rather than relying solely on unfiltered LiDAR detections as done previously. Replace the linear motion model with a non-linear approach, such as a bicycle model, which better represents vehicle dynamics by accounting for the fact that a vehicle moves forward or backward rather than in arbitrary directions.   
