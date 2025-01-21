@@ -25,10 +25,10 @@ Implement the ````manage_tracks()```` function to perform the following tasks:
 
 ### Association Algorithm
 * In the Association class, implemented the ````associate()```` function to:
-    * Compute the association matrix using Mahalanobis distance for all tracks (track_list) and measurements (meas_list).
-    * Used the MHD() function to determine the Mahalanobis distance between a track and a measurement.
-    * Applied the gating() function to verify whether a measurement is within a track's gate. If not, the function sets the corresponding association matrix entry to infinity.
-    * Updated the lists of unassigned measurements (unassigned_meas) and unassigned tracks (unassigned_tracks) by including indices of measurements and tracks that were not associated.
+    * Compute the association matrix using Mahalanobis distance for all tracks (````track_list````) and measurements (````meas_list````).
+    * Used the ````MHD()```` function to determine the Mahalanobis distance between a track and a measurement.
+    * Applied the ````gating()```` function to verify whether a measurement is within a track's gate. If not, the function sets the corresponding association matrix entry to infinity.
+    * Updated the lists of unassigned measurements (````unassigned_meas````) and unassigned tracks (````unassigned_tracks````) by including indices of measurements and tracks that were not associated.
 
 * Implemented ````get_closest_track_and_meas()```` to:
     * Identify the minimum entry in association_matrix.
