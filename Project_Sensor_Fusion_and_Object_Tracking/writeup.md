@@ -14,6 +14,18 @@
 ### Track Management
 * In the Track class, replaced fixed track initialization values with dynamic initialization based on an unassigned LiDAR measurement (meas) of type Measurement.
 * Transformed the measurement from sensor coordinates to vehicle coordinates using the sens_to_veh transformation matrix from the Sensor class.
+
+* Initialized:
+   * Track state as 'initialized'
+   * Track score as 1./params.window, where window is the size parameter from the track management module.
+ 
+### Challenges & Debugging Notes
+
+* **Step 2:** Track Management was particularly challenging. The Root Mean Square Error (RMSE) in this step is quite high (~0.78). Additionally, the green bounding boxes in the visualization do not align properly with the vehicles in the image.
+
+* **Step 3: Association**
+
+* The console output indicates that a single measurement was used multiple times, suggesting an error in the association matrix or in the deletion of used rows/columns. Further debugging is required by printing the association matrix to examine incorrect associations.
    
 **2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?**
 
