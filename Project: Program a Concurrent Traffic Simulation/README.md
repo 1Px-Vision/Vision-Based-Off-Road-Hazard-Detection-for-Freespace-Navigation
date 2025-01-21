@@ -24,3 +24,34 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 * Used std::this_thread::sleep_for(1ms) to prevent excessive CPU usage.
 * The cycleThroughPhases method starts in a separate thread when simulate() is called.
 * Leveraged the thread queue from the base class for managing the simulation.
+
+### Task FP.3: Define the MessageQueue Class
+* Implemented a MessageQueue class to manage traffic light state transitions.
+* Defined public methods:
+      * void send(TrafficLightPhase&& phase) – sends a traffic light phase update using move semantics.
+      * TrafficLightPhase receive() – waits for and retrieves the next phase.
+* Used std::deque _queue to store TrafficLightPhase messages.
+* Included std::condition_variable and std::mutex as private members for synchronization.
+
+### Task FP.4: Implement the send Method
+* Implemented send() to:
+    * Lock the queue using std::lock_guard<std::mutex>.
+    * Add a new traffic light phase message to _queue.
+    * Notify one waiting thread using _condition.notify_one().
+* Added a private MessageQueue<TrafficLightPhase> member inside TrafficLight.
+* Used the queue inside the infinite loop to push new traffic light phases into it via send() with move semantics.
+
+### Task FP.5: Implement the receive Method and waitForGreen
+* Implemented receive() to:
+    * Use std::unique_lock<std::mutex> and _condition.wait() to wait for new messages.
+    * Retrieve and return the next TrafficLightPhase from _queue using move semantics.
+* Implemented waitForGreen(), which:
+    * Runs an infinite loop, repeatedly calling receive().
+    * Returns once a green light phase (TrafficLightPhase::green) is received.
+
+### Task FP.6: Integrate TrafficLight into Intersection
+* In Intersection, added a private member _trafficLight of type TrafficLight.
+* Inside Intersection::simulate(), started the _trafficLight simulation.
+* In Intersection::addVehicleToQueue(), used:
+      * TrafficLight::getCurrentPhase() to check the current phase.
+      * TrafficLight::waitForGreen() to pause execution until the light turns green before allowing vehicles to proceed.
