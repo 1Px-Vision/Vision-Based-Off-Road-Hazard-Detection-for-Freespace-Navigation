@@ -6,10 +6,10 @@
 
 ### Filter Implementation
 
-* Implemented the predict() function for an Extended Kalman Filter (EKF).
-* Developed the F() and Q() functions to compute the system matrix for a constant velocity process model in 3D and determine the corresponding process noise covariance based on the current timestep (dt).
+* Implemented the ````predict()```` function for an Extended Kalman Filter (EKF).
+* Developed the ````F()```` and ````Q()```` functions to compute the system matrix for a constant velocity process model in 3D and determine the corresponding process noise covariance based on the current timestep (dt).
 * Implemented the update() function along with gamma() and S() to compute the residual and residual covariance.
-* At the end of the update step, the resulting state (x) and covariance (P) are saved using the set_x() and set_P() functions from ````student/trackmanagement.py````.
+* At the end of the update step, the resulting ````state (x)```` and ````covariance (P)```` are saved using the ````set_x()```` and ````set_P()```` functions from ````student/trackmanagement.py````.
 
 ### Track Management
 * In the Track class, replaced fixed track initialization values with dynamic initialization based on an unassigned LiDAR measurement (meas) of type Measurement.
@@ -18,7 +18,23 @@
 * Initialized:
    * Track state as 'initialized'
    * Track score as 1./params.window, where window is the size parameter from the track management module.
- 
+
+### Camera Fusion
+* In the Sensor class, implemented the ````in_fov()```` function to determine whether an object's state ````vector (x)```` is visible to the sensor.
+    * First, the state vector is transformed from vehicle coordinates to sensor coordinates.
+    * The function returns True if the object lies within the sensor's field of view (````fov````); otherwise, it returns False.
+    
+* Implemented ````get_hx()```` to define the nonlinear camera measurement function (h):
+   * Transform position estimates from vehicle to camera coordinates.
+   * Project from camera to image coordinates.
+   * Handle division by zero errors gracefully, raising an error if necessary.
+   * Return the transformed state vector ````h(x)````.
+
+* Modified ````generate_measurement()```` in the Sensor class to include camera measurements, removing the restriction to LiDAR-only data.
+* In the Measurement class, initialized camera measurement objects with:
+      * Measurement vector (````z````)
+      * Measurement noise covariance (````R````)
+      * Sensor object (````sensor````)
 ### Challenges & Debugging Notes
 
 * **Step 2:** Track Management was particularly challenging. The Root Mean Square Error (RMSE) in this step is quite high (~0.78). Additionally, the green bounding boxes in the visualization do not align properly with the vehicles in the image.
