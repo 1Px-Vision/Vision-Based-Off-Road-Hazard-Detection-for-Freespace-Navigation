@@ -1,3 +1,13 @@
+# 3D Object Detection (Mid-Term Project)
+
+This project utilizes the Waymo Open Dataset, leveraging real-world data collected from LiDAR sensors. The project requirements are outlined below, categorized by sections:
+
+## Section 1: Compute LiDAR Point Cloud from Range Image
+* Convert the "range" and "intensity" channels of the range image to 8-bit format.
+* Visualize the results using OpenCV. (Task ID: S1_EX1)
+* Visualize the point cloud using the Open3D module.
+* Identify 10 images containing vehicles. (Task ID: S1_EX2)
+
 # Sensor Fusion and Tracking
 
 In this project, you will integrate measurements from LiDAR and cameras to track vehicles over time. Using real-world data from the [Waymo Open Dataset](https://waymo.com/open/), the objectives include detecting objects in 3D point clouds and implementing an extended Kalman filter for sensor fusion and vehicle tracking.
