@@ -12,6 +12,8 @@ This project utilizes the Waymo Open Dataset, leveraging real-world data collect
 3. Visualize the point cloud using the Open3D module.
 4. Identify 10 images containing vehicles. (Task ID: S1_EX2)
 
+![Point_PCL](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Result_Section_1_PCL.jpg)
+
 ## Section 2: Create Bird's-Eye View (BEV) from LiDAR Point Cloud
 1. Transform the LiDAR coordinates from x,y [meters] to x,y [pixels], based on the width and height of the BEV map. (Task ID: S2_EX1)
 2. Adjust the intensity values to ensure vehicles are visible. (Task ID: S2_EX2)
