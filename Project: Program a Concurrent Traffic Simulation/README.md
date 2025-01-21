@@ -14,3 +14,13 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 * TrafficLightPhase getCurrentPhase() – retrieves the current phase (red or green).
 * Added a private method void cycleThroughPhases() to handle phase transitions.
 * Included a private member variable _currentPhase, which stores the current state (red or green).
+
+### Task FP.2: Implement Phase Switching Logic
+* Implemented an infinite loop that:
+    * Measures the time between loop cycles.
+    * Toggles the _currentPhase between red and green.
+    * Sends an update message to a queue using move semantics.
+* Ensured the cycle duration is randomized between 4 to 6 seconds.
+* Used std::this_thread::sleep_for(1ms) to prevent excessive CPU usage.
+* The cycleThroughPhases method starts in a separate thread when simulate() is called.
+* Leveraged the thread queue from the base class for managing the simulation.
