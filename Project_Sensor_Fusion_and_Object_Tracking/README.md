@@ -5,6 +5,7 @@ This project utilizes the Waymo Open Dataset, leveraging real-world data collect
 ## Section 1: Compute LiDAR Point Cloud from Range Image
 1. Convert the "range" and "intensity" channels of the range image to 8-bit format.
 2. Visualize the results using OpenCV. (Task ID: S1_EX1)
+![opencv_range](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project_Sensor_Fusion_and_Object_Tracking/Media/Range_Image_Section_1.png)
 3. Visualize the point cloud using the Open3D module.
 4. Identify 10 images containing vehicles. (Task ID: S1_EX2)
 
