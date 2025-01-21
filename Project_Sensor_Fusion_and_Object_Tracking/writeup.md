@@ -12,8 +12,10 @@
 * At the end of the update step, the resulting ````state (x)```` and ````covariance (P)```` are saved using the ````set_x()```` and ````set_P()```` functions from ````student/trackmanagement.py````.
 
 ### Track Management
-    * Replace the fixed track initialization values with dynamic initialization of ````track.x```` and ````track.P```` using the input meas, an unassigned LiDAR measurement object of type Measurement.
-    * Transform the unassigned measurement from sensor coordinates to vehicle coordinates using the sens_to_veh transformation matrix implemented in the Sensor class.
+    * Replace the fixed track initialization values with dynamic initialization of ````track.x```` and ````track.P```` using the input meas, an unassigned LiDAR 
+       measurement object of type Measurement.
+    * Transform the unassigned measurement from sensor coordinates to vehicle coordinates using the sens_to_veh transformation matrix implemented in the Sensor 
+      class.
 
 ### Association Algorithm
 * In the Association class, implemented the ````associate()```` function to:
