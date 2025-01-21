@@ -55,9 +55,9 @@ Implement the ````manage_tracks()```` function to perform the following tasks:
 * Modified ````generate_measurement()```` in the Sensor class to include camera measurements, removing the restriction to LiDAR-only data.
 
 * In the Measurement class, initialized camera measurement objects with:
-      * Measurement vector (````z````)
-      * Measurement noise covariance (````R````)
-      * Sensor object (````sensor````)
+  * Measurement vector (````z````)
+  * Measurement noise covariance (````R````)
+  * Sensor object (````sensor````)
   
 ### Challenges & Debugging Notes
 
