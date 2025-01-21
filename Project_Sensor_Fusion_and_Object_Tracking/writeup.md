@@ -18,10 +18,10 @@
       class.
 
 #### TrackManagement Class:
-* Implement the manage_tracks() function to perform the following tasks:
-       * Reduce the track score for unassigned tracks.
-       * Remove tracks if their score drops below a certain threshold or if the covariance matrix P becomes too large. Relevant parameters can be found in params.py.
-       * Use the delete_track() function to remove tracks from track_list when necessary.
+Implement the ````manage_tracks()```` function to perform the following tasks:
+* Reduce the track score for unassigned tracks.
+* Remove tracks if their score drops below a certain threshold or if the covariance matrix P becomes too large. Relevant parameters can be found in ````params.py````.
+* Use the delete_track() function to remove tracks from track_list when necessary.
 
 ### Association Algorithm
 * In the Association class, implemented the ````associate()```` function to:
