@@ -3,10 +3,17 @@
 This project utilizes the Waymo Open Dataset, leveraging real-world data collected from LiDAR sensors. The project requirements are outlined below, categorized by sections:
 
 ## Section 1: Compute LiDAR Point Cloud from Range Image
-* Convert the "range" and "intensity" channels of the range image to 8-bit format.
-* Visualize the results using OpenCV. (Task ID: S1_EX1)
-* Visualize the point cloud using the Open3D module.
-* Identify 10 images containing vehicles. (Task ID: S1_EX2)
+1. Convert the "range" and "intensity" channels of the range image to 8-bit format.
+2. Visualize the results using OpenCV. (Task ID: S1_EX1)
+3. Visualize the point cloud using the Open3D module.
+4. Identify 10 images containing vehicles. (Task ID: S1_EX2)
+
+## Section 2: Create Bird's-Eye View (BEV) from LiDAR Point Cloud
+1. Transform the LiDAR coordinates from x,y [meters] to x,y [pixels], based on the width and height of the BEV map. (Task ID: S2_EX1)
+2. Adjust the intensity values to ensure vehicles are visible. (Task ID: S2_EX2)
+3. Compare results from two approaches:
+    * Normalizing the height within each BEV map pixel.
+    * Filling the "height" channel. (Task ID: S2_EX3)
 
 # Sensor Fusion and Tracking
 
