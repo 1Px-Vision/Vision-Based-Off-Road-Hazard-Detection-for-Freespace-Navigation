@@ -53,5 +53,5 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 * In Intersection, added a private member ````_trafficLight```` of type TrafficLight.
 * Inside ````Intersection::simulate()````, started the _trafficLight simulation.
 * In Intersection::addVehicleToQueue(), used:
-      * ````TrafficLight::getCurrentPhase()```` to check the current phase.
+      * ````TrafficLight::getCurrentPhase()```` to check the current phase. 
       * ````TrafficLight::waitForGreen()```` to pause execution until the light turns green before allowing vehicles to proceed.
