@@ -4,6 +4,16 @@
 
 **1. Write a short recap of the four tracking steps and what you implemented there (filter, track management, association, camera fusion). Which results did you achieve? Which part of the project was most difficult for you to complete, and why?**
 
+### Filter Implementation
+
+* Implemented the predict() function for an Extended Kalman Filter (EKF).
+* Developed the F() and Q() functions to compute the system matrix for a constant velocity process model in 3D and determine the corresponding process noise covariance based on the current timestep (dt).
+* Implemented the update() function along with gamma() and S() to compute the residual and residual covariance.
+* At the end of the update step, the resulting state (x) and covariance (P) are saved using the set_x() and set_P() functions from ````student/trackmanagement.py````.
+
+### Track Management
+* In the Track class, replaced fixed track initialization values with dynamic initialization based on an unassigned LiDAR measurement (meas) of type Measurement.
+* Transformed the measurement from sensor coordinates to vehicle coordinates using the sens_to_veh transformation matrix from the Sensor class.
    
 **2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?**
 
