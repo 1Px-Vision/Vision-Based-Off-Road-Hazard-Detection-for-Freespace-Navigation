@@ -56,3 +56,7 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 * In Intersection::addVehicleToQueue(), used:
       * ````TrafficLight::getCurrentPhase()```` to check the current phase. 
       * ````TrafficLight::waitForGreen()```` to pause execution until the light turns green before allowing vehicles to proceed.
+
+## Result Traffic Simulate
+
+![result_TS](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20Program%20a%20Concurrent%20Traffic%20Simulation/Result_Traffic_Simulate.jpg)
