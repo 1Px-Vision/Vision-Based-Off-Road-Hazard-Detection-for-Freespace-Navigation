@@ -61,6 +61,8 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 
 ![result_TS](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20Program%20a%20Concurrent%20Traffic%20Simulation/Result_Traffic_Simulate.jpg)
 
+![result_NYC](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20Program%20a%20Concurrent%20Traffic%20Simulation/Result_Traffic_Simulate_nyc.jpg)
+
 ## Included in this repository
 The project introduces the following modified files:
 * CMakeLists.txt
