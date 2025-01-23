@@ -65,5 +65,5 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 The project introduces the following modified files:
 * CMakeLists.txt
 * ./traffic_simulation
-* main.cpp (Directory src/)
-* route_planner.cpp (Directory src/)
+* TrafficLight.cpp (Directory src/)
+* TrafficLight.h (Directory src/)
