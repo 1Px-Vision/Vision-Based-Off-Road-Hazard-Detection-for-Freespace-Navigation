@@ -1,11 +1,11 @@
 # Project: Program a Concurrent Traffic Simulation
 
-This project involves the development of a traffic simulation where vehicles move along streets and navigate through intersections. As traffic density increases within the city, traffic lights become essential for ensuring road safety. Therefore, each intersection is equipped with a traffic light system. To complete the simulation, a thread-safe communication protocol was designed, enabling seamless interaction between vehicles and intersections while maintaining concurrency and data integrity.
+This project involves developing a traffic simulation in which vehicles move along streets and navigate through intersections. As traffic density increases within the city, traffic lights become essential for ensuring road safety. Therefore, each intersection is equipped with a traffic light system. A thread-safe communication protocol was designed to complete the simulation, enabling seamless interaction between vehicles and intersections while maintaining concurrency and data integrity.
 
 ![traffic](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20Program%20a%20Concurrent%20Traffic%20Simulation/traffic_simulation.gif)
 
 ## Project Tasks
-In the initial boilerplate version of the code, all traffic lights remained green. Upon completing the project, the traffic light now blinks at random intervals between 4 to 6 seconds. To achieve this functionality, the following tasks were completed for successful project submission:
+In the initial boilerplate version of the code, all traffic lights remained green. Upon completing the project, the traffic light blinks randomly between 4 to 6 seconds. To achieve this functionality, the following tasks were completed for successful project submission:
 
 ### Task FP.1: Define the TrafficLight Class
 * Created a TrafficLight class that inherits from ````TrafficObject````.
@@ -60,3 +60,10 @@ In the initial boilerplate version of the code, all traffic lights remained gree
 ## Result Traffic Simulate
 
 ![result_TS](https://github.com/1Px-Vision/Vision-Based-Off-Road-Hazard-Detection-for-Freespace-Navigation/blob/main/Project%3A%20Program%20a%20Concurrent%20Traffic%20Simulation/Result_Traffic_Simulate.jpg)
+
+## Included in this repository
+The project introduces the following modified files:
+
+CMakeLists.txt
+main.cpp (Directory src/)
+route_planner.cpp (Directory src/)
