@@ -19,7 +19,7 @@ int Process::Pid() {
 }
 
 // TODO: Return this process's CPU utilization
-float Process::CpuUtilization() { 
+float Process::CpuUtilization() const { 
     const float total_time = LinuxParser::ActiveJiffies(pid_);
     const float systemUpTime = LinuxParser::UpTime();
     const float processStartTime = LinuxParser::UpTime(pid_); 
@@ -50,10 +50,10 @@ long int Process::UpTime() {
 
 // TODO: Overload the "less than" comparison operator for Process objects
 // REMOVE: [[maybe_unused]] once you define the function
-bool Process::operator<(Process const& a) const { 
-  return CpuUtilization() < a.CpuUtilization();
+bool Process::operator<(const Process& a) const{ 
+    return CpuUtilization()  < a.CpuUtilization(); 
 }
 
-bool Process::operator>(Process const& a) const { 
-  return CpuUtilization() > a.CpuUtilization();
+bool Process::operator>(const Process& a) const{ 
+    return CpuUtilization()  > a.CpuUtilization(); 
 }
