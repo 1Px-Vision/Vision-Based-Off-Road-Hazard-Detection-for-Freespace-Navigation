@@ -7,3 +7,14 @@ This project's interactive Linux process viewer, similar to htop, displays a dyn
 The project introduces the following modified files:
 
 * CMakeLists.txt
+* linux_parser.h (Directory include)
+* process.h
+* processor.h
+* system.h
+
+* format.cpp (Directory src)
+* linux_parser.cpp
+* main.cpp
+* process.cpp
+* processor.cpp
+* system.cpp
