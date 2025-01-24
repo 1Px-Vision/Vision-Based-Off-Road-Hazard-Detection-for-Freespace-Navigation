@@ -11,7 +11,6 @@ The project introduces the following modified files:
 * process.h
 * processor.h
 * system.h
-
 * format.cpp (Directory src)
 * linux_parser.cpp
 * main.cpp
